@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            // Babel generates calls to React.createElement by default, so we redefine that:
+            const React = { createElement: Vue.h };
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+
+    </head>
+
+    <body>
+        <div id="app"></div>
+    </body>
+
+    <script src="js/views/promiseNoData.js" type="text/jsx"></script>
+    <script src="js/app.js" type="text/jsx"></script>
+
+    <script type="text/jsx">
+        Vue.render(<div>hell yeah</div>,document.getElementById("app"))
+
+</script>
+
+</html>
