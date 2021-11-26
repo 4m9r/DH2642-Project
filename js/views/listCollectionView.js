@@ -1,5 +1,8 @@
 function ListCollectionView(props){
     return(
-        "Testing"
+        <div>
+            /* for each list that the user has, create a span for a list showing what contents each list has. */
+        </div>
+
     )
 }
