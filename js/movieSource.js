@@ -19,7 +19,7 @@ const MovieSource = {
         return MovieSource.apiCall("SearchMovie/" + API_KEY + title).then(data => data.results);
     }
     ,
-    // returns a promise which as data has object that contains all the information about the movie 
+    // returns a promise which as data has an object that contains all the information about the movie 
     getMovieDetails(id) {
         return MovieSource.apiCall("Title/" + API_KEY + id);
     }
