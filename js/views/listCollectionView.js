@@ -32,11 +32,13 @@ function ListCollectionView() {
 
             <div>
 
-                <img src={"https://styles.redditmedia.com/t5_4musx8/styles/communityIcon_f9e96rz85d671.png"} height={75} width={75} />
-                <span>
-                    Danika's Lists
-                    Description of my lists? Wow very cool
-                </span>
+               <span> <img src={"https://styles.redditmedia.com/t5_4musx8/styles/communityIcon_f9e96rz85d671.png"} height={100} width={100} /> </span>
+                
+                    <span style="vertical-align: top; display:inline-block">
+                        <h2>Danika's List</h2>
+                        <h6 style="vertical-align: top;"> small text </h6>
+                    </span>
+                
 
 
             </div>
