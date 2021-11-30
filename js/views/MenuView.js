@@ -1,7 +1,7 @@
 function MenuView(props){
 
     return(
-        <div class="menudrop">
+      <div class="menudrop">
         <button class="menubutton">Menu</button>
         <div class="menucontent">
           <a href="#">My lists</a>
