@@ -1,9 +1,9 @@
 function SearchView(props) {
-    return(
+    return (
         <div>
             <input placeholder="search" type="search" onInput={e =>
-            props.onText(e.target.value)
-             }>
+                props.onText(e.target.value)
+            }>
             </input>
 
             <button onClick={(e) =>
@@ -15,24 +15,24 @@ function SearchView(props) {
     );
 }
 
-function SearchResultsView(props){
-    return(<div>
-            {props.searchResults.map(
-                function (item) {
-                    return (
-                           <span onClick={
-                                e => { props.movieChosen(item.id); /*window.location.hash = "#details";*/ }
-                            } >
-                            <img src={item.image} />
-                            <div>
-                                {item.title}
-                            </div>
-                            </span>
-                    );
-                }
-            )
+function SearchResultsView(props) {
+    return (<div>
+        {props.searchResults.map(
+            function (item) {
+                return (
+                    <span onClick={
+                        e => { props.movieChosen(item.id); window.location.hash = "#details"; }
+                    } >
+                        <img src={item.image} />
+                        <div>
+                            {item.title}
+                        </div>
+                    </span>
+                );
             }
+        )
+        }
 
-        </div>
+    </div>
     );
 }
