@@ -18,10 +18,6 @@
         <script src="js/views/SignUpView.js" type="text/jsx"></script>
         <script src="js/views/userListView.js" type="text/jsx"></script>
 
-        <!-- js folder -->
-        <script src="js/app.js" type="text/jsx"></script>
-        <script src="js/movieSource.js" type="text/jsx"></script>
-        <script src="js/UserModel.js" type="text/jsx"></script>
 
         <!-- Babel generates calls to React.createElement by default, so we redefine that: -->
         <script>
@@ -49,16 +45,17 @@
     <script src="js/views/MenuView.js" type="text/jsx"></script>
     <script src="js/vuejs/quizPresenter.js" type="text/jsx"></script>
     <script src="js/UserModel.js"></script>
-    <script src="js/apiConfig.js"></script>
     <script src="js/movieSource.js"></script>
     <script src="js/firebaseConfig.js"></script>
     <script src="js/firebaseModel.js"></script>
     <script src="js/app.js" type="text/jsx"></script>
-    <script src="js/movieSource.js"></script>
     <script src="js/apiConfig.js"></script>
-    <script src="js/views/serachView.js" type="text/jsx"></script>
+    <script src="js/views/searchView.js" type="text/jsx"></script>
+    <script src="js/vuejs/detailsPresenter.js" type="text/jsx"></script>
+    <script src="js/vuejs/showPresenter.js" type="text/jsx"></script>
     <script src="js/views/detailsView.js" type="text/jsx"></script>
     <script src="js/views/MenuView.js" type="text/jsx"></script>
+    <script src="js/vuejs/searchPresenter.js" type="text/jsx"></script>
 
 
 
@@ -74,7 +71,7 @@
        //Vue.render(<MenuView />,document.getElementById("app"))
 
 
-   /*
+   
         const TopLevelModel= {  
             data(){ return  {model: new UserModel()}; },
             created(){ persistModel(this.model); }, 
@@ -83,8 +80,8 @@
                 }
         }; 
         Vue.render(<TopLevelModel/>,document.getElementById("app"))
-*/
-        const myModel=new UserModel (); 
+
+ /*       const myModel=new UserModel (); 
         const TopLevelModel= {  
             data(){ return  {model: myModel}; }, 
             created(){ persistModel(this.model); },
@@ -93,14 +90,13 @@
         firebase.database().ref("quistions").once("value").then( ()=>
         Vue.render(<TopLevelModel/>,document.getElementById("app"))
         )
-        
+        */
         //Vue.render(<div>hell yeah</div>,document.getElementById("app"))
         //MovieSource.searchMovie("joker").then(data => Vue.render(<SearchResultsView searchResults = {data}/>,document.getElementById("app")))
-        MovieSource.getMovieDetails("tt0468569").then(data => Vue.render(<DetailsView data = {data}/>,document.getElementById("app")))
+        //MovieSource.getMovieDetails("tt0468569").then(data => Vue.render(<DetailsView data = {data}/>,document.getElementById("app")))
         //Vue.render(<MenuView/>,document.getElementById("app"))
 
-
-        Vue.render(<div class="main"> <ListCollectionView/> </div>,document.getElementById("app"))
+        //Vue.render(<div class="main"> <ListCollectionView/> </div>,document.getElementById("app"))
 
 
 
