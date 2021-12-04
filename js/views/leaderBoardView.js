@@ -2,7 +2,7 @@ function LeaderBoardView(props) {
     return <div>
         <p>Leader Board</p>
         <table>
-            {props.data.sort(compareScore).map(e => {
+            {props.userData.sort(compareScore).map(e => {
 
                 return <tr><td>{e.user}</td><td>{e.score}</td></tr>
 

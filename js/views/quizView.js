@@ -1,16 +1,17 @@
 function QuizView(params) {
+
     if (params.model.numberOfQuestion === 3)
         return <div>
-            good job you did it your score is 0 you db
+            good job you did it your score is 0
         </div>
 
     return (
 
         <div>
             <div>
-                <span> {params.data[params.model.numberOfQuestion].Question} </span>
+                <span> {params.quizData[params.model.numberOfQuestion].Question} </span>
                 <div>
-                    <button >option1</button>
+                    <button>option1</button>
                     <button>option2</button>
                     <button>option3</button>
                     <button>option4</button>
@@ -29,9 +30,6 @@ function QuizView(params) {
                     </button>
                 </div>
             </div>
-
-            )
-
 
         </div >
     )
