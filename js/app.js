@@ -24,7 +24,7 @@ function App(props) {
 }
 
 function defaultRoute() {
-    if (!(["#list", "#search", "#details", "#quiz", "#recommend"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
+    if (!(["#search", "#details"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
 }
 
 
