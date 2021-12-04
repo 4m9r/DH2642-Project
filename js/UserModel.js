@@ -31,7 +31,7 @@ class UserModel {
 
         if (this.currentMovie) {
             MovieSource.getMovieDetails(id)
-                .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt, console.log(this.currentMovieDetails) }) // {TODO} add observer in the end of it
+                .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt }) // {TODO} add observer in the end of it
                 .catch(er => { if (this.currentMovie === id) this.currentMovieError = er }) //  {TODO}add observer in the end of it
 
 
