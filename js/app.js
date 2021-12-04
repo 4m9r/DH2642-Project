@@ -1,7 +1,16 @@
 function App(props) {
     return (
-        <div>
-            <QuizPresenter model={props.model} />
+        
+        <div> 
+            <div>
+        <SearchPresenter model={props.model} />
+
+         </div>
+           
+            <div>
+            <DetailsPresenter model={props.model} />
+
+             </div>
 
         </div>
 
