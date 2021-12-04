@@ -18,7 +18,26 @@ class UserModel {
     setQuizList(x) {
         this.quizList = x;
     }
+    setCurrentMovie(id) {
+        if (this.currentMovie === id)
+            return;
 
+
+        this.currentMovie = id;
+
+        this.currentMovieDetails = null; this.currentMovieError = null;
+
+        //     this.notifyObservers();
+
+        if (this.currentMovie) {
+            MovieSource.getMovieDetails(id)
+                .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt, console.log(this.currentMovieDetails) }) // {TODO} add observer in the end of it
+                .catch(er => { if (this.currentMovie === id) this.currentMovieError = er }) //  {TODO}add observer in the end of it
+
+
+        }
+
+    }
 
 
 
