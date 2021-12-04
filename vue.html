@@ -1,14 +1,38 @@
 <html>
 
     <head>
+        <!-- stuff needed (from lab) -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+
+        <!-- views folder -->
+        <script src="js/views/leaderBoardView.js" type="text/jsx"></script>
+        <script src="js/views/listCollectionView.js" type="text/jsx"></script>
+        <script src="js/views/LogInView.js" type="text/jsx"></script>
+        <script src="js/views/MenuView.js" type="text/jsx"></script>
+        <script src="js/views/promiseNoData.js" type="text/jsx"></script>
+        <script src="js/views/quizView.js" type="text/jsx"></script>
+        <script src="js/views/SignUpView.js" type="text/jsx"></script>
+        <script src="js/views/userListView.js" type="text/jsx"></script>
+
+        <!-- js folder -->
+        <script src="js/app.js" type="text/jsx"></script>
+        <script src="js/movieSource.js" type="text/jsx"></script>
+        <script src="js/UserModel.js" type="text/jsx"></script>
+
+        <!-- Babel generates calls to React.createElement by default, so we redefine that: -->
         <script>
-            // Babel generates calls to React.createElement by default, so we redefine that:
             const React = { createElement: Vue.h };
         </script>
+
+        <!-- css -->
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- firebase -->
         <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
 
@@ -30,8 +54,17 @@
     <script src="js/firebaseConfig.js"></script>
     <script src="js/firebaseModel.js"></script>
     <script src="js/app.js" type="text/jsx"></script>
+    <script src="js/movieSource.js"></script>
+    <script src="js/apiConfig.js"></script>
+    <script src="js/views/serachView.js" type="text/jsx"></script>
+    <script src="js/views/detailsView.js" type="text/jsx"></script>
+    <script src="js/views/MenuView.js" type="text/jsx"></script>
+
+
+
 
     <script type="text/jsx">
+
 
        // MovieSource.searchMovie("inception").then(data =>Vue.render(<QuizView data = {data}/>,document.getElementById("app")))
         
@@ -61,6 +94,15 @@
         Vue.render(<TopLevelModel/>,document.getElementById("app"))
         )
         
+        //Vue.render(<div>hell yeah</div>,document.getElementById("app"))
+        //MovieSource.searchMovie("joker").then(data => Vue.render(<SearchResultsView searchResults = {data}/>,document.getElementById("app")))
+        MovieSource.getMovieDetails("tt0468569").then(data => Vue.render(<DetailsView data = {data}/>,document.getElementById("app")))
+        //Vue.render(<MenuView/>,document.getElementById("app"))
+
+
+        Vue.render(<div class="main"> <ListCollectionView/> </div>,document.getElementById("app"))
+
+
 
 </script>
 
