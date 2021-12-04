@@ -1,7 +1,7 @@
 function App(props) {
     return (
         <div>
-            <QuizPresenter model={props.model} />
+            <SearchPresenter model={props.model} />
 
         </div>
 
