@@ -1,7 +1,8 @@
 const SearchPresenter = {
     data() { return { promise: null, data: null, error: null, searchQuery: "", }; },
     props: ["model"],
-    created() { this.promise = MovieSource.searchMovie(""); },  // lifecycle 1, execute at creation
+    // 
+    created() { this.promise = MovieSource.searchMovie("Léon: The Professional"); },  // lifecycle 1, execute at creation 
     watch: {
         'promise': {
             immediate: true,

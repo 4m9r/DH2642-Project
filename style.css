@@ -1,5 +1,4 @@
 /* choose whatever font google */
-
 div{
     font-family: 'Outfit', sans-serif;
 }
@@ -82,7 +81,7 @@ img{
   }
 
 .detparent{
-  margin: 0;
+  width: 100%;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -92,9 +91,8 @@ img{
 .detmoviecard{
     position: relative;
     display:ruby;
-    width: 1200px;
-    height: 600px;
-    margin: 100px auto; 
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 10px;
     transition: all 0.4s;
@@ -102,9 +100,9 @@ img{
 
 @media screen and (max-width: 768px) {
     .detmoviecard{
-      width: 95%;
-      margin: 70px auto; 
+      width: 100%; 
       min-height: 350px;
+      
       height: auto;
       
     }
@@ -114,13 +112,15 @@ img{
   }
 }
   .detinfosection{
+    display: inline-grid;
     position: relative;
     width: 100%;
     height: 100%;
-	background-blend-mode: multiply;
-    background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+	  background-blend-mode: multiply;
+    background: linear-gradient(to left, #0d0d0c 50%, transparent 100%);
     z-index: 2;
-    border-radius: 5px;}
+    border-radius: 5px;
+  }
    
     .detmovieheader{
       position: relative;
@@ -175,7 +175,6 @@ img{
     height: 100%; right: 0;
     background-size: cover;
     border-radius: 11px;
-    width: 80%;
     background-position: -100% 10% !important;
     width: 100%;
     background-position: 50% 50% !important;
