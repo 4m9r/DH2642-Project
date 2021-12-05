@@ -1,6 +1,6 @@
 function SearchView(props) {
     return (
-        <div>
+        <div class="searchBar">
             <input placeholder="search" type="search" onInput={e =>
                 props.onText(e.target.value)
             }>
@@ -16,14 +16,14 @@ function SearchView(props) {
 }
 
 function SearchResultsView(props) {
-    return (<div>
+    return (<div >
         {props.searchResults.map(
             function (item) {
                 return (
-                    <span onClick={
+                    <span class="searchResult"  onClick={
                         e => { props.movieChosen(item.id); window.location.hash = "#details"; }
                     } >
-                        <img src={item.image} />
+                        <img class="searchImage" src={item.image} />
                         <div>
                             {item.title}
                         </div>
