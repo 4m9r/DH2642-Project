@@ -1,6 +1,5 @@
 function App(props) {
 
-
     return (
 
         <div  class="flexParent">
@@ -12,15 +11,11 @@ function App(props) {
                 {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show>
                 <Show hash="#recommend"> <RecommendPresenter model={props.model}/> </Show> */}
             </div>
+            <div class="userlist debug"><UserListPresenter model={props.model} /></div>
         </div>
 
 
     );
-
-
-
-
-
 
 }
 
