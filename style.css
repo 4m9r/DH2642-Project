@@ -185,10 +185,53 @@ img{
     display: none;
 }
 
-
+.searchBar{
+  margin-left: 6px ;
+}
  
+.searchResult{
+  text-align: center;
+  display: inline-block;
+  width:  200px;
+  vertical-align: top;
+  margin: 5px;
+  font-size: 15px;   
+  background-color: none;  
+  cursor: pointer;
+}
+
+.searchImage{
+  margin-top: 8px;
+  display: inline-block;
+  width:200px;
+
+}
 
 
+.flexParent{ 
+  display:flex;
+  flex-flow: row;
+  width: 100%;
+  height: 100%;
+  background-color: none;
 
+}
 
+.mainConetent{
+  flex-direction: row;
+  flex:80%;
+  overflow: scroll; 
+  background-color: none; 
+  border-left: none;
+}
 
+.debug{ 	
+  border-style: solid;
+  border-radius:0px ; 
+}
+
+@media ( max-width: 800px){ 
+  .flexParent{
+      display: contents;
+  }
+}
