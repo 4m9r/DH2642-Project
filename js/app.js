@@ -3,8 +3,9 @@ function App(props) {
 
     return (
 
-        <div  class="flexParent">
-            <div class="mainConetent debug">
+        <div class="flexParent">
+
+            <div class="mainConetent">
                 {/* <QuizPresenter model={props.model} />
                 <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
                 <Show hash="#search"> <SearchPresenter model={props.model} /> </Show>
@@ -12,6 +13,7 @@ function App(props) {
                 {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show>
                 <Show hash="#recommend"> <RecommendPresenter model={props.model}/> </Show> */}
             </div>
+            <div class="menuSideBar"><MenuView /></div>
         </div>
 
 
