@@ -21,7 +21,7 @@ function UserListView(props) {
                 </span>
                 <span style="display: block; margin-bottom: 10px" onClick={e=> window.location.hash = "#user"}>
                     <img class= "profile-pic" src={"https://styles.redditmedia.com/t5_4musx8/styles/communityIcon_f9e96rz85d671.png" }  />
-                    <p style="display: inline; margin: 15px;">Danika</p>
+                    <p style="display: inline; margin: 15px;cursor: pointer;">Danika</p>
                 </span>
                 <span style="display: block; margin-bottom: 10px">
                     <img class= "profile-pic" src={"https://media.istockphoto.com/photos/angry-senior-woman-protecting-her-cat-with-a-gun-picture-id1191072534?k=20&m=1191072534&s=612x612&w=0&h=ikLctnv_2qMpIfHmBs-dQ2oqSksrFTg_UstAyo8I1FU=" }  />
