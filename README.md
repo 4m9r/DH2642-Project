@@ -30,33 +30,34 @@ Planning to do
   - [ ] Implementing navigation between all the pages
   - [ ] More CSS styling
 
+## file structure
 - loginView.js and signUpView.js
-  - Will be used to authenticate the users
+  -  Will be used to authenticate the users
 - MenuView.js
-  - A drop down menu, used for navigation by users
+  -  A drop down menu, used for navigation by users
 - detailsView.js and detailsPresenter.js
- - Used to render the details for each movie (and find similar movies)
+ -  Used to render the details for each movie (and find similar movies)
 - searchView.js and searchPresenter.js
-  - Used for searching movies
+  -  Used for searching movies
 - showPresenter.js and app.js
- - Used for connecting the pages with hashes
+ -  Used for connecting the pages with hashes
 - quizView.js and quizPresenter.js
-  - Used for displaying quizzes of a chosen movie
+  -  Used for displaying quizzes of a chosen movie
 - movieListView.js and listCollectionView.js and userListView.js and userListPresenter.js
- - Used to show users' lists
+ -  Used to show users' lists
 - leaderboardView.js
- - Used for ranking all the users based on their quiz scores
+ -  Used for ranking all the users based on their quiz scores
 - promiseNoData.js
- - Used for checking if the promise has any data
+ -  Used for checking if the promise has any data
 - firebaseModel.js
-  - Used for accessing database for quizzes and authentication and creating a persisting model 
+  -  Used for accessing database for quizzes and authentication and creating a persisting model 
 - userModel.js
  - all the calculations behind the scene happening
 - movieSource.js
- - used for calling the API
+ -  used for calling the API
 - style.css
   -  Used for styling the website
 - vue.html
- - Used for rendering
+ -  Used for rendering
 
 
