@@ -1,31 +1,32 @@
 function App(props) {
 
-
     return (
 
-        <div  class="flexParent">
-            <div class="mainConetent debug">
+        <div class="flexParent">
+
+            <div class="mainConetent">
                 {/* <QuizPresenter model={props.model} />
                 <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
                 <Show hash="#search"> <SearchPresenter model={props.model} /> </Show>
                 <Show hash="#details"> <DetailsPresenter model={props.model} /> </Show>
+                <Show hash="#user"> <ListPresenter model={props.model} /> </Show>
                 {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show>
                 <Show hash="#recommend"> <RecommendPresenter model={props.model}/> </Show> */}
             </div>
+
+            <div class="menuSideBar"><MenuView /></div>
+
+            <div class="userlist debug"><UserListPresenter model={props.model} /></div>
+
         </div>
 
 
     );
 
-
-
-
-
-
 }
 
 function defaultRoute() {
-    if (!(["#search", "#details"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
+    if (!(["#search", "#details", "user"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
 }
 
 
