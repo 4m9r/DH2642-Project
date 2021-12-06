@@ -33,11 +33,11 @@ Planning to do
 - loginView.js and signUpView.js
   - Will be used to authenticate the users
 - MenuView.js
-  A drop down menu, used for navigation by users
+  - A drop down menu, used for navigation by users
 - detailsView.js and detailsPresenter.js
  - Used to render the details for each movie (and find similar movies)
 - searchView.js and searchPresenter.js
-- Used for searching movies
+  - Used for searching movies
 - showPresenter.js and app.js
  - Used for connecting the pages with hashes
 - quizView.js and quizPresenter.js
@@ -49,13 +49,13 @@ Planning to do
 - promiseNoData.js
  - Used for checking if the promise has any data
 - firebaseModel.js
-- Used for accessing database for quizzes and authentication and creating a persisting model 
+  - Used for accessing database for quizzes and authentication and creating a persisting model 
 - userModel.js
  - all the calculations behind the scene happening
- - movieSource.js
+- movieSource.js
  - used for calling the API
 - style.css
--  Used for styling the website
+  -  Used for styling the website
 - vue.html
  - Used for rendering
 
