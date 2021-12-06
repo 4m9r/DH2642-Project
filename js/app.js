@@ -16,7 +16,7 @@ function App(props) {
 
             <div class="menuSideBar"><MenuView /></div>
 
-            {/* <div class="userlist debug"><UserListPresenter model={props.model} /></div> */}
+            <div class="userlist debug"><UserListPresenter model={props.model} /></div>
 
         </div>
 
