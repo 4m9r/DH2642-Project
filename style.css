@@ -13,22 +13,6 @@ img{
     background-color: #d7e4f8;
 }
 
-
-.listbox {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: pre-line;
-    width:fit-content;  /* content width */
-    height:fit-content;  /* content height */
-    padding: 13px;  /* space between content and border */
-    margin: 10px;  /* space between border and other elements */
-    border-width: 1px;  /* border thickness */
-    border-color: rgb(100, 100, 100);
-    border-style:solid;
-    border-radius:3px; 
-    background-color:#cacaca; 
-  }
-
 .menubutton {
     background-color: #d8db12;
     min-width: 157px;
@@ -214,6 +198,28 @@ img{
   cursor: pointer;
 }
 
+.listbox {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: pre-line;
+  width:fit-content;  /* content width */
+  height:fit-content;  /* content height */
+  padding: 13px;  /* space between content and border */
+  margin: 10px;  /* space between border and other elements */
+  border-width: 1px;  /* border thickness */
+  border-color: rgb(100, 100, 100);
+  border-style:solid;
+  border-radius:3px; 
+  background-color:#cacaca; 
+}
+
+.userlist-name{
+  color: white;
+  font-size: 14px;
+  display: inline;
+  margin: 15px;
+}
+
 
 .flexParent{ 
   display:flex;
@@ -225,7 +231,8 @@ img{
 }
 
 .userlist{
-  width:250px;
+  width:200px;
+  background-color: rgb(26, 25, 25); 
 }
 
 .mainConetent{
