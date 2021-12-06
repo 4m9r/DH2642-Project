@@ -23,12 +23,12 @@ Done
   - [X] Basic implementation of users list (a list of lists) on the right side of the page 
 
 Planning to do
-  - [] Implementation of finding similar movies to a chosen movie
-  - [] Users will be able to take a quiz on a chosen movie using firebase
-  - [] Users will collaborate on lists of their favourite movies
-  - [] Users will be able to authenticate using firebase
-  - [] Implementing navigation between all the pages
-  - [] More CSS styling
+  - [ ] Implementation of finding similar movies to a chosen movie
+  - [ ] Users will be able to take a quiz on a chosen movie using firebase
+  - [ ] Users will collaborate on lists of their favourite movies
+  - [ ] Users will be able to authenticate using firebase
+  - [ ] Implementing navigation between all the pages
+  - [ ] More CSS styling
 
 loginView.js and signUpView.js
   Will be used to authenticate the users
