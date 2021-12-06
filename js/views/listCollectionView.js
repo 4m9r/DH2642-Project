@@ -1,4 +1,4 @@
-function ListCollectionView() {
+function ListCollectionView(props) {
     // return (
     //     <div>
     //         /* for each list that the user has, create a span for a list showing what contents each list has. */
@@ -26,7 +26,7 @@ function ListCollectionView() {
 
 
 
-    // HARD CODE TESTING //
+    {/* hard code testing only. Visual purposes. need to fix firebase stuff and chuck all the styling into the style.css file*/}
     return (
         <div>
 
@@ -35,8 +35,8 @@ function ListCollectionView() {
                <span> <img src={"https://styles.redditmedia.com/t5_4musx8/styles/communityIcon_f9e96rz85d671.png"} height={100} width={100} /> </span>
                 
                     <span style="vertical-align: top; display:inline-block">
-                        <h2>Danika's List</h2>
-                        <h6 style="vertical-align: top;"> small text </h6>
+                        <h3>Danika's List</h3>
+                        <p style="vertical-align: top;"> some text, description of lists maybe</p>
                     </span>
                 
 
@@ -47,8 +47,8 @@ function ListCollectionView() {
 
             <div>
                 <div class="listbox">
-                    <img src={"https://cdn-icons-png.flaticon.com/512/214/214309.png"} height={40} width={40} />
-                    <h4>Favourites</h4>
+                <div style="display: flex; justify-content: center; "><img src={"https://cdn-icons-png.flaticon.com/512/214/214309.png"} height={40} width={40} style="text-align: center;"/></div>
+                    <p style="margin-bottom: 10px;"><b>Favourites</b></p>
                     <p> Movie 1 </p>
                     <p> Movie 2 </p>
                     <p> Movie 3 </p>
@@ -56,8 +56,8 @@ function ListCollectionView() {
                 </div>
 
                 <div class="listbox">
-                    <img src={"https://cdn-icons-png.flaticon.com/512/3418/3418886.png"} height={40} width={40} />
-                    <h4>Watchlist</h4>
+                <div style="display: flex; justify-content: center; "><img src={"https://cdn-icons-png.flaticon.com/512/3418/3418886.png"} height={40} width={40} style="text-align: center;"/></div>
+                    <p style="margin-bottom: 10px;"><b>Watchlist</b></p>
                     <p> Movie 1 </p>
                     <p> Movie 2 </p>
                     <p> Movie 3 </p>
@@ -66,7 +66,7 @@ function ListCollectionView() {
 
                 <div class="listbox">
                     <div style="display: flex; justify-content: center; "><img src={"https://cdn.pixabay.com/photo/2017/03/31/21/58/rain-2192523_960_720.png"} height={40} width={40} /></div>
-                    <h4>For a Rainy Day</h4>
+                    <p style="margin-bottom: 10px;"><b>For a Rainy Day</b></p>
                     <p> Movie 1 </p>
                     <p> Movie 2 </p>
                     <p> Movie 3 </p>
