@@ -14,21 +14,21 @@ Film Buff helps users search for movies based on popularity, genre, etc. Additio
   - Users can make their own lists and collaborate on them if they want
 
 Done 
-  -[x] Users can see search results and details from an API call
-  -[x] Navigation between pages
-  -[x] Users can see the drop down Menu bar on the right side of the page 
-  -[x] The skeleton of Quiz page and Authentication page (sign up and log in) have been implemented
-  -[x] The skeleton of Leaderboard list and list of movies for users have also been implemented
-  -[x] The basic initial implementation of firebase for quizzes has been done
-  -[x] Basic implementation of users list (a list of lists) on the right side of the page 
+  - [X] Users can see search results and details from an API call
+  - [X] Navigation between pages
+  - [X] Users can see the drop down Menu bar on the right side of the page 
+  - [X] The skeleton of Quiz page and Authentication page (sign up and log in) have been implemented
+  - [X] The skeleton of Leaderboard list and list of movies for users have also been implemented
+  - [X] The basic initial implementation of firebase for quizzes has been done
+  - [X] Basic implementation of users list (a list of lists) on the right side of the page 
 
 Planning to do
-  -[] Implementation of finding similar movies to a chosen movie
-  -[] Users will be able to take a quiz on a chosen movie using firebase
-  -[] Users will collaborate on lists of their favourite movies
-  -[] Users will be able to authenticate using firebase
-  -[] Implementing navigation between all the pages
-  -[] More CSS styling
+  - [] Implementation of finding similar movies to a chosen movie
+  - [] Users will be able to take a quiz on a chosen movie using firebase
+  - [] Users will collaborate on lists of their favourite movies
+  - [] Users will be able to authenticate using firebase
+  - [] Implementing navigation between all the pages
+  - [] More CSS styling
 
 loginView.js and signUpView.js
   Will be used to authenticate the users
