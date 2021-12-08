@@ -18,6 +18,7 @@ class UserModel {
     setQuizList(x) {
         this.quizList = x;
     }
+
     setCurrentMovie(id) {
         if (this.currentMovie === id)
             return;
