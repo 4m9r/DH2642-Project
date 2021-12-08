@@ -5,13 +5,13 @@ function DetailsView(props) {
                 <div class="detinfosection">
                     <div class="detailsbutton">
                         <button
-                        /*onClick={props.dishAdded}
-                        disabled={props.isDishInMenu}*/
+                        /*onClick={}
+                        disabled={}*/
                         >
                             Add to my Favorites Movies!
                         </button>
 
-                        <button /*onClick={() => window.location.hash = "#search"}*/>
+                        <button onClick={() => window.location.hash = "#rec"}>
                             Find Similar Movies!
                         </button>
                     </div>
