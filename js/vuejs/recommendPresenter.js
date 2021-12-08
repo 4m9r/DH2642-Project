@@ -4,6 +4,7 @@ function RecommendPresenter(props) {
             <span> Similar Movies to {props.model.currentMovieDetails.title} </span>
             <SearchResultsView
                 searchResults={props.model.currentMovieDetails.similars}
+                movieChosen={id => props.model.setCurrentMovie(id)}
             />
            
         </div>
