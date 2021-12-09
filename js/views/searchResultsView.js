@@ -1,6 +1,5 @@
 function SearchResultsView(props) {
-
-    return (<div >
+    return (<div class="results">
         {props.searchResults.map(
             function (item) {
                 return (

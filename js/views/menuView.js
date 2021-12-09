@@ -5,10 +5,9 @@ function MenuView(props) {
       <button class="menubutton">Menu</button>
       <div class="menucontent">
         <a onClick={() => window.alert("To be implemented")
-        }>My list</a>
+        }>Profile</a>
         <a href="#search">Search for a movie</a>
-        <a onClick={() => window.alert("To be implemented")}>Recommend me a movie</a>
-        <a onClick={() => window.alert("To be implemented")}>Take a quiz</a>
+        <a onClick={() => window.alert("To be implemented")}>Log Out</a>
       </div>
     </div>
   )

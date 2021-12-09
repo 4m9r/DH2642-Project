@@ -1,7 +1,7 @@
 function SearchView(props) {
     return (
         <div class="searchBar">
-            <input placeholder="search" type="search" onInput={e =>
+            <input class="searchBox" placeholder="search" type="search" onInput={e =>
                 props.onText(e.target.value)
             }>
             </input>
