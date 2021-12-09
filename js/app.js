@@ -4,7 +4,12 @@ function App(props) {
 
         <div class="flexParent">
 
+            
             <div class="mainConetent">
+                <div class ="navbar">
+                    <span class="logo">FilmBuff</span>
+                    <span > <MenuView /></span>
+                </div>
                 {/* <QuizPresenter model={props.model} />
                 <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
                 <Show hash="#search"> <SearchPresenter model={props.model} /> </Show>
@@ -14,8 +19,6 @@ function App(props) {
                 {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show>
                 <Show hash="#recommend"> <RecommendPresenter model={props.model}/> </Show> */}
             </div>
-
-            <div class="menuSideBar"><MenuView /></div>
 
             <div class="userlist debug"><UserListPresenter model={props.model} /></div>
 
