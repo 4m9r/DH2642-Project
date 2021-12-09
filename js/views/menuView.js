@@ -15,6 +15,12 @@ function MenuView(props) {
 
 
 }
+
+// if user is logged in => Log Out option
+// if nobody is logged in => Log In option
+
+
+
 {/* <div class="menudrop">
 <button class="menubutton">Menu</button>
 <div class="menucontent">

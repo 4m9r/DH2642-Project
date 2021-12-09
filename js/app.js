@@ -11,6 +11,8 @@ function App(props) {
                 <Show hash="#details"> <DetailsPresenter model={props.model} /> </Show>
                 <Show hash="#user"> <ListPresenter model={props.model} /> </Show>
                 <Show hash="#rec"> <RecommendPresenter model={props.model} /> </Show>
+                <Show hash="#signup"> <SignUpPresenter/> </Show>
+                <Show hash="#login"> <LogInPresenter model={props.model} /> </Show>
                 {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show>
                 <Show hash="#recommend"> <RecommendPresenter model={props.model}/> </Show> */}
             </div>
@@ -27,7 +29,7 @@ function App(props) {
 }
 
 function defaultRoute() {
-    if (!(["#search", "#details", "user"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
+    if (!(["#search", "#details", "user", "signup", "login"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
 }
 
 
