@@ -18,12 +18,12 @@ function DetailsView(props) {
                     <div class="detmovieheader">
                         <img class="detimg" src={props.data.image} />
                         <h1>{props.data.title}</h1>
-                        <h4>year: {props.data.year}, Director: {props.data.directors}</h4>
+                        <h4>Year: {props.data.year}   ,  Director: {props.data.directors}</h4>
                         <span class="detminutes">{props.data.runtimeStr}</span>
                         <p class="detgenre">Genre: {props.data.genres}</p>
                         <div class="detmoviedesc">
                             <p class="dettext">
-                                plot: {props.data.plot}
+                                Plot: {props.data.plot}
                             </p>
                         </div>
                     </div>
