@@ -5,16 +5,16 @@ function App(props) {
         <div class="flexParent">
 
             <div class="mainConetent">
-                {/* <QuizPresenter model={props.model} />
-                <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
+
+                {/* <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
                 <Show hash="#search"> <SearchPresenter model={props.model} /> </Show>
                 <Show hash="#details"> <DetailsPresenter model={props.model} /> </Show>
                 <Show hash="#user"> <ListPresenter model={props.model} /> </Show>
                 <Show hash="#rec"> <RecommendPresenter model={props.model} /> </Show>
-                <Show hash="#signup"> <SignUpPresenter/> </Show>
+                <Show hash="#signup"> <SignUpPresenter /> </Show>
                 <Show hash="#login"> <LogInPresenter model={props.model} /> </Show>
-                {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show>
-                <Show hash="#recommend"> <RecommendPresenter model={props.model}/> </Show> */}
+                {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show> */}
+
             </div>
 
             <div class="menuSideBar"><MenuView /></div>
