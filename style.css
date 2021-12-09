@@ -249,11 +249,11 @@ img{
   border-radius:0px ; 
 }
 
-@media ( max-width: 800px){ 
+/* @media ( max-width: 800px){ 
   .flexParent{
       display: contents;
   }
-}
+} */
 
 .loading{
   border: none;
@@ -263,5 +263,13 @@ img{
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  
+}
+
+.noResult{
+  border: none;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  font-weight: bolder;
+  color: #d8db12;
 }
