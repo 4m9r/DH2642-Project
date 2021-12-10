@@ -6,7 +6,7 @@ function SearchView(props) {
             }>
             </input>
 
-            <button class="searchBut" onClick={(e) =>
+            <button class="searchBut" onClick={() =>
                 props.onSearch()
             }>
                 Search!
