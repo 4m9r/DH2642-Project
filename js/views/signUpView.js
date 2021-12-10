@@ -24,7 +24,7 @@ function SignUpView(props){
         <div> &nbsp; </div>
         <div> &nbsp; </div>
         <div> &nbsp; </div>
-        <button onclick="signUp()" id="signUp"> Sign Up </button>
+        <button onclick={()=>signUp()} > Sign Up </button>
         
       </body>
   
