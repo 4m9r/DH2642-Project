@@ -1,11 +1,12 @@
 class UserModel {
-    constructor(questionNumber = 0, currentMovie = null, userID = null, usersList = [], quizList = [], userData = []) {
+    constructor(questionNumber = 0, currentMovie = null, userID = null, usersList = [], quizList = [], userData = [], observers = []) {
         this.setQuestionNumber(questionNumber);
         this.currentMovie = currentMovie;
         this.userID = userID;
         this.usersList = usersList;
         this.userData = userData;
         this.quizList = quizList;
+        this.observers = observers;
     }
 
     setQuestionNumber(x) {
@@ -28,16 +29,34 @@ class UserModel {
 
         this.currentMovieDetails = null; this.currentMovieError = null;
 
-        //     this.notifyObservers();
+        this.notifyObservers();
 
         if (this.currentMovie) {
             MovieSource.getMovieDetails(id)
-                .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt }) // {TODO} add observer in the end of it
-                .catch(er => { if (this.currentMovie === id) this.currentMovieError = er }) //  {TODO}add observer in the end of it
-
+                .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt, this.notifyObservers(); })
+                .catch(er => { if (this.currentMovie === id) this.currentMovieError = er, this.notifyObservers(); })
 
         }
+    }
 
+
+    addObserver(callback) {
+        this.observers = [...this.observers, callback]
+    }
+
+    removeObserver(callback) {
+        this.observers = this.observers.filter(obs => obs !== callback)
+    }
+
+    notifyObservers() {
+        setTimeout(() => {
+            try {
+                this.observers.forEach(cb => cb.call())
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }, 0);
     }
 
 

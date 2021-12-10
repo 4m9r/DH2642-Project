@@ -1,9 +1,9 @@
 function SearchResultsView(props) {
-    return (<div >
+    return (<div class="results">
         {props.searchResults.map(
             function (item) {
                 return (
-                    <span class="searchResult"  onClick={
+                    <span class="searchResult" onClick={
                         e => { props.movieChosen(item.id); window.location.hash = "#details"; }
                     } >
                         <img class="searchImage" src={item.image} />

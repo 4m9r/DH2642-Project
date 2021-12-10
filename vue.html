@@ -41,6 +41,7 @@
 
         </script> -->
         <!-- for authentication -->
+        <title>FilmBUFF</title>
 
     </head>
 
@@ -100,7 +101,7 @@
             created(){ persistModel(this.model); },
             render(){  return <App model={this.model} />; }
         }; 
-        firebase.database().ref("quistions").once("value").then( ()=>
+        firebase.database().ref("userModel").once("value").then( ()=>
         Vue.render(<TopLevelModel/>,document.getElementById("app"))
         ) 
 
