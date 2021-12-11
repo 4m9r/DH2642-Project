@@ -1,9 +1,10 @@
 class UserModel {
-    constructor(questionNumber = 0, currentMovie = null, userID = null, username = "anon", usersList = [], friendsList = [], quizList = [], userData = [], observers = []) {
+    constructor(questionNumber = 0, currentMovie = null, userID = null, username = null, profilePic = null, usersList = [], friendsList = [], quizList = [], userData = [], observers = []) {
         this.setQuestionNumber(questionNumber);
         this.currentMovie = currentMovie;
         this.userID = userID;
         this.username = username;
+        this.profilePic = profilePic;
         this.usersList = usersList;
         this.friendsList = friendsList;
         this.userData = userData;
@@ -24,6 +25,11 @@ class UserModel {
 
     setUsername(name){
         this.username = name;
+    }
+
+    setProfilePic(source){
+        this.profilePic = source;
+        console.log("source is set to: " + source)
     }
 
     addToUsersList(list){

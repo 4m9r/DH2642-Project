@@ -1,24 +1,34 @@
 function ListCollectionView(props) {
 
-console.log("this is props: " + props);
+    console.log("DEBUG: page is of name " + props.username)
 
     return (
         <div>
-            <h1>{props.selectedUser.usernames}'s Lists</h1>
+             <span> <img src={props.profilePic} height={100} width={100} /> </span>
+
+             <span style="vertical-align: top; display:inline-block">
+                    <h3>{props.username}'s Lists</h3>
+                    <p style="vertical-align: top;">this the user's page (vlad not vlad2)</p>
+                </span>
+            
             {
                 <div>
-                    <div class="listbox">
-                        <span>
-                            {/* <img src={x.image} height={100} width={100} /> */}
-                            <p style="margin-bottom: 10px;"><b>Favourites</b></p>
-                            <p> Movie 1 </p>
-                            <p> Movie 2 </p>
-                            <p> Movie 3 </p>
-                            <p> ... </p>
-                        </span>
-                    </div>
+
+                    {/* {props.selectedUsersList.map(x =>
+                        <div class="listbox">
+                            <span>
+                                <p style="margin-bottom: 10px;"><b>x.listname</b></p>
+                                <p> Movie 1 </p>
+                                <p> Movie 2 </p>
+                                <p> Movie 3 </p>
+                                <p> ... </p>
+                            </span>
+                        </div>
+
+                    )} */}
+
                 </div>
-}
+            }
         </div>
 
     )

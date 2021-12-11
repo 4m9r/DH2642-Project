@@ -27,7 +27,7 @@ function persistModel(model) {
     firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3").child("username").on("value", function (data) {
         try {
             if (data.val()) {
-                model.setUsername(data.val().currentMovie || null);
+                model.setUsername(data.val() || null);
             }
         }
         catch (e) {
@@ -46,13 +46,11 @@ function persistModel(model) {
         }
     })
 
-    firebase.database().ref('/user/ENbGmOTG0MY3RCskym96V5NYZQH3/usersList').once('value').then(function (snapshot) {
-        snapshot.forEach(function (childNodes){
-            model.addToUsersList(childNodes.val());
+
+    firebase.database().ref('/user/ENbGmOTG0MY3RCskym96V5NYZQH3/profilepic').once('value').then(function (snapshot) {
+        model.setProfilePic(snapshot.val());
         })
        
-      })
-
 
     firebase.database().ref("question").on("value", function (data) {
         try {
