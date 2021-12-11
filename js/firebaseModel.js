@@ -38,7 +38,7 @@ function persistModel(model) {
     firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3/usersList").once("value", function (data) {
         try {
             if (data.val()) {
-                model.setUsersList(data.val().currentMovie || null);
+                model.addToUsersList(data.val().currentMovie || null);
             }
         }
         catch (e) {

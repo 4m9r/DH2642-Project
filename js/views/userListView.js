@@ -7,7 +7,7 @@ function UserListView(props) {
 
                 {props.userFriends.map(x =>
 
-                    <span class="friendslist-display" onClick={()=> window.alert("to be implemented")}>
+                    <span class="friendslist-display" onClick={e=> e=x.username, window.location.hash = "#user"}>
                         <img class="profile-pic" src={x.profilepic} />
                         <p class="userlist-name">{x.username}</p>
                     </span>
