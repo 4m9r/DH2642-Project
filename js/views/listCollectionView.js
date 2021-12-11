@@ -1,23 +1,22 @@
 function ListCollectionView(props) {
 
-    console.log("DEBUG: page is of name " + props.username)
-
     return (
         <div>
-             <span> <img src={props.profilePic} height={100} width={100} /> </span>
+            <span> <img src={props.profilePic} height={100} width={100} /> </span>
 
-             <span style="vertical-align: top; display:inline-block">
-                    <h3>{props.username}'s Lists</h3>
-                    <p style="vertical-align: top;">this the user's page (vlad not vlad2)</p>
-                </span>
-            
+            <span style="vertical-align: top; display:inline-block">
+                <h3>{props.username}'s Lists</h3>
+                <p style="vertical-align: top;">this the user's page (vlad not vlad2)</p>
+            </span>
+
             {
                 <div>
 
-                    {/* {props.selectedUsersList.map(x =>
+                    {console.log("this is the props list collection: " + props.listCollection)}
+                    {props.listCollection.map(x =>
                         <div class="listbox">
                             <span>
-                                <p style="margin-bottom: 10px;"><b>x.listname</b></p>
+                                <p style="margin-bottom: 10px;"><b>{x}</b></p>
                                 <p> Movie 1 </p>
                                 <p> Movie 2 </p>
                                 <p> Movie 3 </p>
@@ -25,7 +24,7 @@ function ListCollectionView(props) {
                             </span>
                         </div>
 
-                    )} */}
+                    )}
 
                 </div>
             }

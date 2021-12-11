@@ -36,11 +36,10 @@ function persistModel(model) {
     })
 
     firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3/usersList").once("value", function (data) {
-        try {
-            if (data.val()) {
-                model.addToUsersList(data.val().currentMovie || null);
-            }
-        }
+        try{
+        data.forEach(function (childNodes){
+            model.addToUsersList(childNodes.val().listname || null);
+        })}
         catch (e) {
             console.log(e);
         }
