@@ -244,6 +244,11 @@ display: inline;
 margin: 15px;
 }
 
+.friendslist-display{
+  display: block;
+  margin-bottom: 10px;
+}
+
 
 .flexParent{ 
 display:flex;

@@ -2,7 +2,10 @@ function ListPresenter(props) {
     return (
         <div>
             <ListCollectionView
-                data={props.model} />
+                username={x=> props.model.username}
+                lists = {props.model.usersList}
+                
+                />
         </div>
     )
 

@@ -1,9 +1,11 @@
 class UserModel {
-    constructor(questionNumber = 0, currentMovie = null, userID = null, usersList = [], quizList = [], userData = [], observers = []) {
+    constructor(questionNumber = 0, currentMovie = null, userID = null, username = "anon", usersList = [], friendsList = [], quizList = [], userData = [], observers = []) {
         this.setQuestionNumber(questionNumber);
         this.currentMovie = currentMovie;
         this.userID = userID;
+        this.username = username;
         this.usersList = usersList;
+        this.friendsList = friendsList;
         this.userData = userData;
         this.quizList = quizList;
         this.observers = observers;
@@ -18,6 +20,18 @@ class UserModel {
 
     setQuizList(x) {
         this.quizList = x;
+    }
+
+    setUsername(name){
+        this.username = name;
+    }
+
+    addToUsersList(list){
+        this.usersList = [...this.usersList, list];
+    }
+
+    addToFriendList(name){
+        this.friendsList = [...this.friendsList, name];
     }
 
     setCurrentMovie(id) {
