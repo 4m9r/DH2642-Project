@@ -6,27 +6,29 @@ function ListCollectionView(props) {
 
             <span style="vertical-align: top; display:inline-block">
                 <h3>{props.username}'s Lists</h3>
-                <p style="vertical-align: top;">this the user's page (vlad not vlad2)</p>
+                <p style="vertical-align: top;">this is the description</p>
             </span>
 
+            {console.log(props.lists)}
+
             {
-                <div>
+                // <div>
 
-                    {console.log("this is the props list collection: " + props.listCollection)}
-                    {props.listCollection.map(x =>
-                        <div class="listbox">
-                            <span>
-                                <p style="margin-bottom: 10px;"><b>{x}</b></p>
-                                <p> Movie 1 </p>
-                                <p> Movie 2 </p>
-                                <p> Movie 3 </p>
-                                <p> ... </p>
-                            </span>
-                        </div>
 
-                    )}
+                //     {props.lists.map(x =>
+                //         <div class="listbox">
+                //             <span>
+                //                 <p style="margin-bottom: 10px;"><b>{x.listname}</b></p>
+                //                 {/* {x.map(movie => 
+                //                 <p> {movie} </p>
+                //                 )} */}
 
-                </div>
+                //             </span>
+                //         </div>
+
+                //     )}
+
+                // </div>
             }
         </div>
 
