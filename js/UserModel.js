@@ -26,7 +26,6 @@ class UserModel {
         this.quizList = quizList;
         this.observers = observers;
         this.quizState = quizState;
-        this.userName = userName
     }
 
     // setQuestionNumber(x) {

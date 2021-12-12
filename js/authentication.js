@@ -1,24 +1,22 @@
-const auth =firebase.auth();
+const auth = firebase.auth();
 
-function signUp(){
+function signUp(model) {
   let email = document.getElementById("email");
   let password = document.getElementById("password");
   let username = document.getElementById("username");
-  const promise = auth.createUserWithEmailAndPassword(email.value, password.value).then(function(){
+  const promise = auth.createUserWithEmailAndPassword(email.value, password.value).then(() => {
 
     let user = auth.currentUser;
 
     //let databaseref = firebase.database().ref();
-
-    let user_data = {
-        username: username
-        //useruid: user.uid
-    }
-
-    console.log("user.uid");
-    firebase.database().ref("users").child(user.uid).set({username: username});
-
-    //firebase.database().ref("users").child(user.uid).set(user_data);
+    // let user_data = {
+    //   username: username
+    //   //useruid: user.uid
+    // }
+    model.setUsername(username.value);
+    model.setUserID(user.uid);
+    console.log(model)
+    // firebase.database().ref("users").child(user.uid).set(user_data);
     //firebase.database().ref("film-buff-33fbc-default-rtdb").child("user/" + user.uid).set(user_data); 
     //firebase.database().ref("user").child(user.uid).set(user_data); 
 
@@ -33,7 +31,7 @@ function signUp(){
 
 }
 
-function logIn(){
+function logIn() {
   let email = document.getElementById("email");
   let password = document.getElementById("password");
 
@@ -43,19 +41,17 @@ function logIn(){
 
 }
 
-function signOut(){
+function signOut() {
   auth.signOut();
-  
+
 }
 
-auth.onAuthStateChanged(function(user){
-  if(user){
+auth.onAuthStateChanged(function (user) {
+  if (user) {
     let email = user.email;
     window.location.hash = "#search";
   }
-  else{
+  else {
     alert("No such user");
   }
 });
-
-let user_data
