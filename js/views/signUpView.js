@@ -24,8 +24,13 @@ function SignUpView(props) {
         <div> &nbsp; </div>
         <div> &nbsp; </div>
         <div> &nbsp; </div>
+<<<<<<< HEAD
         <button onclick="signUp()" id="signUp"> Sign Up </button>
 
+=======
+        <button onclick={()=>signUp()} > Sign Up </button>
+        
+>>>>>>> 6c71ef53e90e0c6f920fb368d15228cc77cba5fe
       </body>
 
     </html>

@@ -244,6 +244,11 @@ display: inline;
 margin: 15px;
 }
 
+.friendslist-display{
+  display: block;
+  margin-bottom: 10px;
+}
+
 
 .flexParent{ 
 display:flex;
@@ -307,10 +312,14 @@ font-size: 32px;
 
 
 .noResult{
-border: none;
-position: absolute;
-left: 40%;
-top: 50%;
-font-weight: bolder;
-color: #d8db12;
+  border: none;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  font-weight: bolder;
+  color: #d8db12;
+}
+
+.similar{
+  color: white;
 }
