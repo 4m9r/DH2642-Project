@@ -1,23 +1,36 @@
 class UserModel {
-    constructor(questionNumber = 0, currentMovie = null, userID = null, usersList = [], quizList = [], userData = [], observers = []) {
-        this.setQuestionNumber(questionNumber);
+    constructor(userName, currentMovie = null, userID = null, usersList = [], quizList = [], userData = [], observers = [], quizState = []) {
+        // this.setQuestionNumber(questionNumber);
         this.currentMovie = currentMovie;
         this.userID = userID;
         this.usersList = usersList;
         this.userData = userData;
         this.quizList = quizList;
         this.observers = observers;
+        this.quizState = quizState;
+        this.userName = userName
     }
 
-    setQuestionNumber(x) {
-        if (x < 5)
-            this.numberOfQuestion = x;
-        else
-            throw "More than 10 questions";
+    // setQuestionNumber(x) {
+    //     if (x < 5)
+    //         this.numberOfQuestion = x;
+    //     else
+    //         throw "More than 10 questions";
+    // }
+    setStateOfQuize(obj) {
+        this.quizState = [...this.quizState, obj]
     }
 
     setQuizList(x) {
         this.quizList = x;
+    }
+
+    setUserID(uid) {
+        this.userID = uid;
+    }
+
+    setUserName(name) {
+        this.userName = name;
     }
 
     setCurrentMovie(id) {
