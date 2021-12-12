@@ -14,6 +14,9 @@ function DetailsView(props) {
                         <button onClick={() => window.location.hash = "#rec"}>
                             Find Similar Movies!
                         </button>
+                        <button onClick={() => window.location.hash = "#quiz"}>
+                            Take a quiz
+                        </button>
                     </div>
                     <div class="detmovieheader">
                         <img class="detimg" src={props.data.image || ""} />
