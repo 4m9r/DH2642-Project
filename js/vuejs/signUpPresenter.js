@@ -1,7 +1,7 @@
-function SignUpPresenter() {
+function SignUpPresenter(props) {
     return (
         <div>
-            <SignUpView/>
+            <SignUpView model={props.model}/>
         </div>
     );
 }
