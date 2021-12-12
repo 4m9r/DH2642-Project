@@ -7,8 +7,7 @@ function persistModel(model) {
             return;
 
         firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3").child("userModel").set({  // object literal
-            nQuestion: model.numberOfQuestion,
-            currentMovie: model.currentMovie
+            currentMovie: model.currentMovie,
         });
     });
 
@@ -17,6 +16,7 @@ function persistModel(model) {
         try {
             if (data.val()) {
                 model.setCurrentMovie(data.val().currentMovie || null)
+                model.setStateOfQuize(false)
             }
         }
         catch (e) {
