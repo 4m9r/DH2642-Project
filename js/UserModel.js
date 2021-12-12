@@ -1,5 +1,16 @@
 class UserModel {
-    constructor(questionNumber = 0, currentMovie = null, userID = null, username = null, profilePic = null, usersList = [], friendsList = [], quizList = [], userData = [], observers = []) {
+    constructor(
+        questionNumber = 0,
+        currentMovie = null,
+        userID = null,
+        username = null,
+        profilePic = null,
+        usersList = [],
+        friendsList = [],
+        currentFriend = 'anon',
+        quizList = [],
+        userData = [],
+        observers = []) {
         this.setQuestionNumber(questionNumber);
         this.currentMovie = currentMovie;
         this.userID = userID;
@@ -7,6 +18,7 @@ class UserModel {
         this.profilePic = profilePic;
         this.usersList = usersList;
         this.friendsList = friendsList;
+        this.currentFriend = currentFriend;
         this.userData = userData;
         this.quizList = quizList;
         this.observers = observers;
@@ -23,21 +35,24 @@ class UserModel {
         this.quizList = x;
     }
 
-    setUsername(name){
+    setUsername(name) {
         this.username = name;
     }
 
-    setProfilePic(source){
+    setProfilePic(source) {
         this.profilePic = source;
-        console.log("source is set to: " + source)
     }
 
-    addToUsersList(list){
+    addToUsersList(list) {
         this.usersList = [...this.usersList, list];
     }
 
-    addToFriendList(name){
+    addToFriendList(name) {
         this.friendsList = [...this.friendsList, name];
+    }
+
+    setCurrentFriend(friend){
+        this.currentFriend = friend;
     }
 
     setCurrentMovie(id) {

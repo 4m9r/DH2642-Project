@@ -1,11 +1,12 @@
 function ListPresenter(props) {
+
     return (
         <div>
             <ListCollectionView
-                username = {props.model.username}
-                profilePic = {props.model.profilePic}
-                listCollection = {props.model.usersList}
-                />
+                username={props.model.currentFriend.username}
+                profilePic={props.model.currentFriend.profilepic}
+                lists={props.model.currentFriend.usersList}
+            />
         </div>
     )
 

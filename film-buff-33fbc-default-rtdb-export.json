@@ -1,0 +1,149 @@
+{
+
+  "friends" : [
+    
+  {
+    "profilepic" : "https://preview.redd.it/a604rad7j4651.png?auto=webp&s=63112b65e516d3e19dcbd05489d09967a2d73dce",
+    "userID" : 12345,
+    "username" : "vlad2",
+    "usersList" : [
+      {"listname" : {"Favourites": [
+        {"moviename" : "movie1"},
+        {"moviename" : "movie2"},
+        {"moviename" : "movie3"}]}},
+      
+        {"listname" : {"Watchlist": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}},
+
+      {"listname" : {"vlad2": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}}
+    ]
+  },
+  
+  
+  
+  {
+    "profilepic" : "https://styles.redditmedia.com/t5_4musx8/styles/communityIcon_f9e96rz85d671.png",
+    "userID" : 23456,
+    "username" : "danika",
+    "usersList" : [
+      {"listname" : {"Favourites": [
+        {"moviename" : "movie1"},
+        {"moviename" : "movie2"},
+        {"moviename" : "movie3"}]}},
+      
+        {"listname" : {"Watchlist": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}},
+
+      {"listname" : {"danika": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}}
+    ]
+  },
+  
+  
+  {
+    "profilepic" : "https://media.istockphoto.com/photos/angry-senior-woman-protecting-her-cat-with-a-gun-picture-id1191072534?k=20&m=1191072534&s=612x612&w=0&h=ikLctnv_2qMpIfHmBs-dQ2oqSksrFTg_UstAyo8I1FU=",
+    "userID" : 34567,
+    "username" : "hasti",
+    "usersList" : [
+      {"listname" : {"Favourites": [
+        {"moviename" : "movie1"},
+        {"moviename" : "movie2"},
+        {"moviename" : "movie3"}]}},
+      
+        {"listname" : {"Watchlist": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}},
+
+      {"listname" : {"hasti": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}}
+    ]
+  },
+  
+  
+  {
+    "profilepic" : "https://i.pinimg.com/736x/c3/38/b3/c338b35ff34c623e8e7c3777a70c4e3f.jpg",
+    "userID" : 45678,
+    "username" : "amir",
+    "usersList" : [
+      {"listname" : {"Favourites": [
+        {"moviename" : "movie1"},
+        {"moviename" : "movie2"},
+        {"moviename" : "movie3"}]}},
+      
+        {"listname" : {"Watchlist": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}},
+
+      {"listname" : {"amir": [
+          {"moviename" : "movie1"},
+          {"moviename" : "movie2"},
+          {"moviename" : "movie3"}]}}
+    ]
+  } ],
+  
+
+
+  
+  
+  "question" : [ {
+    "Question" : "who directed the movie?",
+    "correct" : 1,
+    "option1" : "params.details.directors",
+    "option2" : "yes",
+    "option3" : "yes",
+    "option4" : "yes"
+  }, {
+    "Question" : "Year of the movie?",
+    "correct" : 1,
+    "option1" : "params.details.year",
+    "option2" : "yes",
+    "option3" : "yes",
+    "option4" : "yes"
+  }, {
+    "Question" : "The writer?",
+    "correct" : 1,
+    "option1" : "params.details.writerList[0].name",
+    "option2" : "yes",
+    "option3" : "yes",
+    "option4" : "yes"
+  } ],
+
+
+
+
+
+  "user" : {
+    "ENbGmOTG0MY3RCskym96V5NYZQH3" : {
+      "profilepic" : "https://memeguy.com/photos/images/horse-sitting-down-424838.jpg",
+      "user" : {
+        "currentMovie" : "tt0110413",
+        "nQuestion" : 0
+      },
+      "userModel" : {
+        "currentMovie" : "tt0082949",
+        "nQuestion" : 0
+      },
+      "username" : "vlad",
+      "usersList" : [ {
+        "listname" : "Favourites"
+      }, {
+        "listname" : "Watchlist"
+      }, {
+        "listname" : "For a Rainy Day"
+      } ]
+    }
+  }
+}
