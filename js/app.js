@@ -4,9 +4,9 @@ function App(props) {
 
         <div class="flexParent">
 
-            
+
             <div class="mainConetent">
-                <div class ="navbar">
+                <div class="navbar">
                     <span class="logo">FilmBuff</span>
                     <span > <MenuView /></span>
                 </div>
@@ -18,7 +18,7 @@ function App(props) {
                 <Show hash="#rec"> <RecommendPresenter model={props.model} /> </Show>
                 <Show hash="#signup"> <SignUpPresenter /> </Show>
                 <Show hash="#login"> <LogInPresenter model={props.model} /> </Show>
-                {/* <Show hash="#quiz"> <QuizPresenter model={props.model}/> </Show> */}
+                <Show hash="#quiz"> <QuizPresenter model={props.model} /> </Show>
 
             </div>
 
@@ -30,9 +30,9 @@ function App(props) {
     );
 
 }
-
+// Not working 
 function defaultRoute() {
-    if (!(["#search", "#details", "#user", "#signup", "#login","#rec"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
+    if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
 }
 
 
