@@ -4,7 +4,7 @@ function QuizView(props) {
     if (props.model.quizState.find((e) => e.movie === props.model.currentMovie))
         return <div class="finishMassage">
             Good job you! Your score for this movie is
-            {(props.model.quizState.find((e) => e.movie === props.model.currentMovie)).score} <br />
+            {" " + (props.model.quizState.find((e) => e.movie === props.model.currentMovie)).score} <br />
 
             <button class="redirectButton" onClick={() => {
                 window.location.hash = "#search";
