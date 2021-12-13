@@ -11,7 +11,8 @@ class UserModel {
         currentFriend = 'anon',
         quizList = [],
         userData = [],
-        observers = []) {
+        observers = [],
+        totalScore = 0) {
 
         //this.setQuestionNumber(questionNumber);
         this.quizState = quizState
@@ -26,6 +27,7 @@ class UserModel {
         this.quizList = quizList;
         this.observers = observers;
         this.quizState = quizState;
+        this.totalScore = totalScore;
     }
 
     // setQuestionNumber(x) {
@@ -43,10 +45,12 @@ class UserModel {
     }
     setUserID(uid) {
         this.userID = uid;
+        this.notifyObservers();
     }
 
     setUsername(name) {
         this.username = name;
+        this.notifyObservers();
     }
 
     setProfilePic(source) {
@@ -74,12 +78,26 @@ class UserModel {
 
         this.currentMovieDetails = null; this.currentMovieError = null;
 
+        this.randomMovieDetails1 = null; this.randomMovieError1 = null;
+        this.randomMovieDetails2 = null; this.randomMovieError2 = null;
+        this.randomMovieDetails3 = null; this.randomMovieError3 = null;
+
         this.notifyObservers();
 
         if (this.currentMovie) {
             MovieSource.getMovieDetails(id)
                 .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt, this.notifyObservers(); })
                 .catch(er => { if (this.currentMovie === id) this.currentMovieError = er, this.notifyObservers(); })
+
+            MovieSource.getRandomMovieDetails(id)
+                .then(dt => { if (this.currentMovie === id) this.randomMovieDetails1 = dt, this.notifyObservers(); })
+                .catch(er => { if (this.currentMovie === id) this.randomMovieError1 = er, this.notifyObservers(); })
+            MovieSource.getRandomMovieDetails(id)
+                .then(dt => { if (this.currentMovie === id) this.randomMovieDetails2 = dt, this.notifyObservers(); })
+                .catch(er => { if (this.currentMovie === id) this.randomMovieError2 = er, this.notifyObservers(); })
+            MovieSource.getRandomMovieDetails(id)
+                .then(dt => { if (this.currentMovie === id) this.randomMovieDetails3 = dt, this.notifyObservers(); })
+                .catch(er => { if (this.currentMovie === id) this.randomMovieError3 = er, this.notifyObservers(); })
 
         }
     }
@@ -104,6 +122,9 @@ class UserModel {
         }, 0);
     }
 
+    setTotalScore(int) {
+        this.totalScore = this.totalScore + int;
+    }
 
 
 }
