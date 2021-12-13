@@ -22,6 +22,9 @@ const MovieSource = {
     // returns a promise which as data has an object that contains all the information about the movie 
     getMovieDetails(id) {
         return MovieSource.apiCall("Title/" + API_KEY + id);
+    },
+    getTopMovies() {
+        return (MovieSource.apiCall("MostPopularMovies/" + API_KEY).then(data => data.results))
     }
 
 
