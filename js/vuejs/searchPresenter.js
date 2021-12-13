@@ -1,7 +1,6 @@
 const SearchPresenter = {
     data() { return { promise: null, data: null, error: null, searchQuery: "", }; },
     props: ["model"],
-    // 
     created() { this.promise = MovieSource.searchMovie("Léon: The Professional"); },  // lifecycle 1, execute at creation 
     watch: {
         'promise': {
@@ -10,9 +9,13 @@ const SearchPresenter = {
                 this.data = this.error = null;
                 if (this.promise) {
                     const p = this.promise;
-                    this.promise.then(dt => { if (this.promise === p) this.data = dt; console.log(dt) })
+                    this.promise.then(dt => {
+                        if (this.promise === p)
+                            this.data = dt;
+                        if (this.data == null)
+                            this.error = "no Movie was found"
+                    })
                         .catch(er => { if (this.promise === p) this.error = er; });
-                    console.log(this.data)
                 }
 
             }
@@ -20,7 +23,6 @@ const SearchPresenter = {
     },
 
     render() {
-        console.log(this.data)
         return <div>
             <SearchView
                 onText={txt => this.searchQuery = txt}
@@ -28,9 +30,8 @@ const SearchPresenter = {
 
             />
 
-            {promiseNoData(this.promise, this.data, this.error) || (this.data.length === 0) ?
-                <div class="noResult">No Movie Found</div> : false ||
-                <SearchResultsView searchResults={this.data}
+            {promiseNoData(this.promise, this.data, this.error) ||
+                < SearchResultsView searchResults={this.data}
                     movieChosen={id => this.model.setCurrentMovie(id)}
                 />}
         </div>
