@@ -36,33 +36,45 @@ class UserModel {
     // }
     setStateOfQuize(obj) {
         this.quizState = [...this.quizState, obj]
+        this.notifyObservers();
     }
 
     setQuizState(obj) {
         this.quizState = [...this.quizState, obj];
-    }
-    setUserID(uid) {
-        this.userID = uid;
+        this.notifyObservers();
     }
 
-    setUsername(name) {
+    setUser(uid,name){
+        this.userID = uid;
         this.username = name;
+        this.notifyObservers();
     }
+    // setUserID(uid) {
+    //     this.userID = uid;
+    // }
+
+    //setUsername(name) {
+    //    this.username = name;
+    //}
 
     setProfilePic(source) {
         this.profilePic = source;
+        this.notifyObservers();
     }
 
     addToUsersList(list) {
         this.usersList = [...this.usersList, list];
+        this.notifyObservers();
     }
 
     addToFriendList(name) {
         this.friendsList = [...this.friendsList, name];
+        this.notifyObservers();
     }
 
     setCurrentFriend(friend) {
         this.currentFriend = friend;
+        this.notifyObservers();
     }
 
     setCurrentMovie(id) {

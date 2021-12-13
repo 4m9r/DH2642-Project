@@ -10,8 +10,7 @@ function persistModel(model) {
 
         // if (loadingFromFirebase)
         //     return;
-
-        firebase.database().ref("user").child(user.uid).child("userModel").set({  // object literal
+        firebase.database().ref("user").child(user.uid).set({  // object literal
             currentMovie: model.currentMovie,
             username: model.username
         });
