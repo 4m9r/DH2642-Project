@@ -1,6 +1,6 @@
 function SearchResultsView(props) {
     return (<div class="results">
-        {props.searchResults.map(
+        {props.searchResults?.map(
             function (item) {
                 return (
                     <span class="searchResult" onClick={
