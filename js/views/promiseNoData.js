@@ -15,7 +15,7 @@ function promiseNoData(promise, data, error) {
         //case 3
         else if (data == null)
             return (
-                <span>{error}</span>
+                <span class="noResult">{error}</span>
             )
         // case 4
         else
