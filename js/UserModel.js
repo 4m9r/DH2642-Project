@@ -1,6 +1,5 @@
 class UserModel {
     constructor(
-        questionNumber = 0,
         currentMovie = null,
         userID = null,
         username = null,
@@ -14,7 +13,6 @@ class UserModel {
         observers = [],
         totalScore = 0) {
 
-        //this.setQuestionNumber(questionNumber);
         this.quizState = quizState
         this.currentMovie = currentMovie;
         this.userID = userID;
@@ -30,43 +28,47 @@ class UserModel {
         this.totalScore = totalScore;
     }
 
-    // setQuestionNumber(x) {
-    //     if (x < 5)
-    //         this.numberOfQuestion = x;
-    //     else
-    //         throw "More than 10 questions";
-    // }
     setStateOfQuize(obj) {
         this.quizState = [...this.quizState, obj]
+        this.notifyObservers();
     }
 
     setQuizState(obj) {
         this.quizState = [...this.quizState, obj];
-    }
-    setUserID(uid) {
-        this.userID = uid;
         this.notifyObservers();
     }
 
-    setUsername(name) {
+    setUser(uid, name) {
+        this.userID = uid;
         this.username = name;
         this.notifyObservers();
     }
+    // setUserID(uid) {
+    //     this.userID = uid;
+    // }
+
+    //setUsername(name) {
+    //    this.username = name;
+    //}
 
     setProfilePic(source) {
         this.profilePic = source;
+        this.notifyObservers();
     }
 
     addToUsersList(list) {
         this.usersList = [...this.usersList, list];
+        this.notifyObservers();
     }
 
     addToFriendList(name) {
         this.friendsList = [...this.friendsList, name];
+        this.notifyObservers();
     }
 
     setCurrentFriend(friend) {
         this.currentFriend = friend;
+        this.notifyObservers();
     }
 
     setCurrentMovie(id) {
@@ -88,16 +90,6 @@ class UserModel {
             MovieSource.getMovieDetails(id)
                 .then(dt => { if (this.currentMovie === id) this.currentMovieDetails = dt, this.notifyObservers(); })
                 .catch(er => { if (this.currentMovie === id) this.currentMovieError = er, this.notifyObservers(); })
-
-            MovieSource.getRandomMovieDetails(id)
-                .then(dt => { if (this.currentMovie === id) this.randomMovieDetails1 = dt, this.notifyObservers(); })
-                .catch(er => { if (this.currentMovie === id) this.randomMovieError1 = er, this.notifyObservers(); })
-            MovieSource.getRandomMovieDetails(id)
-                .then(dt => { if (this.currentMovie === id) this.randomMovieDetails2 = dt, this.notifyObservers(); })
-                .catch(er => { if (this.currentMovie === id) this.randomMovieError2 = er, this.notifyObservers(); })
-            MovieSource.getRandomMovieDetails(id)
-                .then(dt => { if (this.currentMovie === id) this.randomMovieDetails3 = dt, this.notifyObservers(); })
-                .catch(er => { if (this.currentMovie === id) this.randomMovieError3 = er, this.notifyObservers(); })
 
         }
     }
@@ -124,6 +116,7 @@ class UserModel {
 
     setTotalScore(int) {
         this.totalScore = this.totalScore + int;
+        this.notifyObservers();
     }
 
 

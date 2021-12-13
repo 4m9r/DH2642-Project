@@ -13,8 +13,10 @@ function signUp(model) {
     //   username: username
     //   //useruid: user.uid
     // }
-    model.setUsername(username.value);
-    model.setUserID(user.uid);
+    //model.setUsername(username.value);
+   // model.setUserID(user.uid);
+
+   model.setUser(user.uid,username.value);
     console.log(model)
     // firebase.database().ref("users").child(user.uid).set(user_data);
     //firebase.database().ref("film-buff-33fbc-default-rtdb").child("user/" + user.uid).set(user_data); 
@@ -32,8 +34,8 @@ function signUp(model) {
 }
 
 function logIn() {
-  let email = document.getElementById("email");
-  let password = document.getElementById("password");
+  let email = document.getElementById("emaillog");
+  let password = document.getElementById("passwordlog");
 
   const promise = auth.signInWithEmailAndPassword(email.value, password.value);
   promise.catch(e => alert(e.message));
@@ -48,10 +50,8 @@ function signOut() {
 
 auth.onAuthStateChanged(function (user) {
   if (user) {
-    let email = user.email;
+    //let email = user.email;
     window.location.hash = "#search";
   }
-  else {
-    alert("No such user");
-  }
+  
 });

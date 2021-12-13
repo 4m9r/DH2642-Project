@@ -7,25 +7,24 @@ function persistModel(model) {
 
         // if (loadingFromFirebase)
         //     return;
-
-        firebase.database().ref("user").child(user.uid).child("userModel").set({  // object literal
+        firebase.database().ref("user").child(user.uid).set({  // object literal
             currentMovie: model.currentMovie,
             username: model.username
         });
     });
 
 
-    firebase.database().ref("user").child(user.uid).child("userModel").on("value", function (data) {
-        try {
-            if (data.val()) {
-                model.setCurrentMovie(data.val().currentMovie || null);
-                model.setUsername(data.val().username || null)
-            }
-        }
-        catch (e) {
-            console.log(e);
-        }
-    })
+    // firebase.database().ref("user").child(user.uid).child("userModel").on("value", function (data) {
+    //     try {
+    //         if (data.val()) {
+    //             model.setCurrentMovie(data.val().currentMovie || null);
+    //             model.setUsername(data.val().username || null)
+    //         }
+    //     }
+    //     catch (e) {
+    //         console.log(e);
+    //     }
+    // })
 
     // firebase.database().ref("user/leaderBoardScore").child(model.username).set({  // object literal
     //     totalScore: model.totalScore,
