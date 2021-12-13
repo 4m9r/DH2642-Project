@@ -24,7 +24,7 @@ const MovieSource = {
         return MovieSource.apiCall("Title/" + API_KEY + id);
     },
     getTopMovies() {
-        return (MovieSource.apiCall("MostPopularMovies/" + API_KEY).then(data => data.results))
+        return (MovieSource.apiCall("Top250Movies/" + API_KEY));
     }
 
 
