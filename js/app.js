@@ -30,9 +30,16 @@ function App(props) {
     );
 
 }
+
+const auth = firebase.auth();
+let user = auth.currentUser;
+
 // Not working 
 function defaultRoute() {
-    if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";
+    if (user) 
+        {if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";}
+    else
+        {if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login";}
 }
 
 
