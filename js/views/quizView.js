@@ -2,10 +2,11 @@ function QuizView(props) {
 
     let scoreCounter = 0;
     if (props.model.quizState.find((e) => e.movie === props.model.currentMovie))
-        return <div>
-            good job you did it your score is {(props.model.quizState.find((e) => e.movie === props.model.currentMovie)).score} <br />
+        return <div class="finishMassage">
+            Good job you! Your score for this movie is
+            {(props.model.quizState.find((e) => e.movie === props.model.currentMovie)).score} <br />
 
-            <button onClick={() => {
+            <button class="redirectButton" onClick={() => {
                 window.location.hash = "#search";
             }
             }>
@@ -13,10 +14,10 @@ function QuizView(props) {
             </button>
         </div>
     if (props.model.currentMovieDetails.similars == null)
-        return <div>
+        return <div class="finishMassage">
             This movie does not have a quiz <br />
 
-            <button onClick={() => {
+            <button class="redirectButton" onClick={() => {
                 window.location.hash = "#search";
             }
             }>
@@ -31,10 +32,10 @@ function QuizView(props) {
     let theMovie = props.model.currentMovieDetails;
 
     if (similar1 === undefined || similar2 === undefined || similar3 === undefined)
-        return <div>
+        return <div class="finishMassage">
             This movie does not have a quiz <br />
 
-            <button onClick={() => {
+            <button class="redirectButton" onClick={() => {
                 window.location.hash = "#search";
             }
             }>
@@ -44,7 +45,8 @@ function QuizView(props) {
 
 
     return (
-        <div>
+        <div class="quizSection">
+            <p> Be aware that you can only take one quiz per movie</p><br />
             <fieldset>
                 <legend>Who was the director of the movie "{props.model.currentMovieDetails.title}"?</legend>
                 <input type="radio" name="q1" id="q1o1" /><label for="q1o1">{
@@ -87,13 +89,13 @@ function QuizView(props) {
             <fieldset>
                 <legend>Which set of genres describe the movie "{props.model.currentMovieDetails.title}" best? </legend>
                 <input type="radio" name="q5" id="q5o1" /><label for="q5o1">{similar3.genres + " ,Musical"}</label><br />
-                <input type="radio" name="q5" id="q5o2" /><label for="q5o2">{similar1.genres}</label><br />
+                <input type="radio" name="q5" id="q5o2" /><label for="q5o2">{similar1.genres + " ,Comedy"}</label><br />
                 <input type="radio" name="q5" id="q5o3" /><label for="q1o3">{similar2.genres + " ,Sci-Fi"}</label><br />
                 <input type="radio" name="q5" id="q5o4" /><label for="q1o4">{theMovie.genres}</label><br />
             </fieldset>
 
 
-            <button onClick={() => {
+            <button class="quizButton" onClick={() => {
                 if (document.getElementById("q1o2").checked)
                     scoreCounter = scoreCounter + 10;
                 if (document.getElementById("q2o3").checked)
@@ -104,7 +106,7 @@ function QuizView(props) {
                     scoreCounter = scoreCounter + 10;
                 if (document.getElementById("q5o4").checked)
                     scoreCounter = scoreCounter + 10;
-                // props.model.setUserTotalScore(scoreCounter);
+                props.model.setUserTotalScore(scoreCounter);
                 props.model.setQuizState({ movie: props.model.currentMovie, score: scoreCounter })
             }
             }>
@@ -113,3 +115,4 @@ function QuizView(props) {
         </div >
     )
 }
+
