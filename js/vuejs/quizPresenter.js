@@ -6,6 +6,4 @@ function QuizPresenter(props) {
             </div>
         </div>
     )
-
-
 }
