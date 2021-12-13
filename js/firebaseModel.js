@@ -2,16 +2,21 @@ function persistModel(model) {
     let user = firebase.auth().currentUser;
     //let loadingFromFirebase = false;
     model.addObserver(function () {
-        console.log(model)
-        console.log(user.uid)
-
         // if (loadingFromFirebase)
         //     return;
         firebase.database().ref("user").child(user.uid).set({  // object literal
             currentMovie: model.currentMovie,
-            username: model.username
+            username: model.username,
+            quizState: model.quizState,
+            totalScore: model.totalScore
         });
+        firebase.database().ref("learboard").child(model.userNumber).set({
+            username: model.username,
+            totalScore: model.totalScore
+        })
     });
+
+
 
 
     // firebase.database().ref("user").child(user.uid).child("userModel").on("value", function (data) {
