@@ -1,10 +1,7 @@
 function persistModel(model) {
-    console.log("here")
     let user = firebase.auth().currentUser;
     //let loadingFromFirebase = false;
     model.addObserver(function () {
-        console.log("here")
-
         console.log(model)
         console.log(user.uid)
 
@@ -29,6 +26,12 @@ function persistModel(model) {
             console.log(e);
         }
     })
+
+    // firebase.database().ref("user/leaderBoardScore").child(model.username).set({  // object literal
+    //     totalScore: model.totalScore,
+    // });
+
+
 
     // firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3").child("username").on("value", function (data) {
     //     try {
