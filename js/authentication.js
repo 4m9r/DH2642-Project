@@ -34,8 +34,8 @@ function signUp(model) {
 }
 
 function logIn() {
-  let email = document.getElementById("email");
-  let password = document.getElementById("password");
+  let email = document.getElementById("emaillog");
+  let password = document.getElementById("passwordlog");
 
   const promise = auth.signInWithEmailAndPassword(email.value, password.value);
   promise.catch(e => alert(e.message));
@@ -50,10 +50,8 @@ function signOut() {
 
 auth.onAuthStateChanged(function (user) {
   if (user) {
-    let email = user.email;
+    //let email = user.email;
     window.location.hash = "#search";
   }
-  else {
-    alert("No such user");
-  }
+  
 });

@@ -17,17 +17,17 @@ function persistModel(model) {
     });
 
 
-    firebase.database().ref("user").child(user.uid).child("userModel").on("value", function (data) {
-        try {
-            if (data.val()) {
-                model.setCurrentMovie(data.val().currentMovie || null);
-                model.setUsername(data.val().username || null)
-            }
-        }
-        catch (e) {
-            console.log(e);
-        }
-    })
+    // firebase.database().ref("user").child(user.uid).child("userModel").on("value", function (data) {
+    //     try {
+    //         if (data.val()) {
+    //             model.setCurrentMovie(data.val().currentMovie || null);
+    //             model.setUsername(data.val().username || null)
+    //         }
+    //     }
+    //     catch (e) {
+    //         console.log(e);
+    //     }
+    // })
 
     // firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3").child("username").on("value", function (data) {
     //     try {
