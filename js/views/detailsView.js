@@ -34,7 +34,7 @@ function DetailsView(props) {
 
                 </div>
                 <div class="detblurback">
-                    <img class="blurImg" src={props.data.image ||  ""} />
+                    <img class="blurImg" src={props.data.image || ""} />
                 </div>
             </div>
 
