@@ -11,7 +11,8 @@ class UserModel {
         quizList = [],
         userData = [],
         observers = [],
-        totalScore = 0) {
+        totalScore = 0,
+        userNumber = 0) {
 
         this.quizState = quizState
         this.currentMovie = currentMovie;
@@ -26,6 +27,7 @@ class UserModel {
         this.observers = observers;
         this.quizState = quizState;
         this.totalScore = totalScore;
+        this.userNumber = userNumber;
     }
 
     setStateOfQuize(obj) {
@@ -41,6 +43,7 @@ class UserModel {
     setUser(uid, name) {
         this.userID = uid;
         this.username = name;
+        this.userNumber = this.userNumber + 1;
         this.notifyObservers();
     }
     // setUserID(uid) {
@@ -50,6 +53,10 @@ class UserModel {
     //setUsername(name) {
     //    this.username = name;
     //}
+    setUserTotalScore(score) {
+        this.totalScore = this.totalScore + score;
+        this.notifyObservers();
+    }
 
     setProfilePic(source) {
         this.profilePic = source;
@@ -79,10 +86,6 @@ class UserModel {
         this.currentMovie = id;
 
         this.currentMovieDetails = null; this.currentMovieError = null;
-
-        this.randomMovieDetails1 = null; this.randomMovieError1 = null;
-        this.randomMovieDetails2 = null; this.randomMovieError2 = null;
-        this.randomMovieDetails3 = null; this.randomMovieError3 = null;
 
         this.notifyObservers();
 
