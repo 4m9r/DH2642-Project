@@ -1,7 +1,7 @@
 const SearchPresenter = {
     data() { return { promise: null, data: null, error: null, searchQuery: "", }; },
     props: ["model"],
-    created() { this.promise = MovieSource.searchMovie("Léon: The Professional"); },  // lifecycle 1, execute at creation 
+    created() { this.promise = MovieSource.getTopMovies(); },  // lifecycle 1, execute at creation 
     watch: {
         'promise': {
             immediate: true,
@@ -13,7 +13,7 @@ const SearchPresenter = {
                         if (this.promise === p)
                             this.data = dt;
                         if (this.data == null)
-                            this.error = "no Movie was found"
+                            this.error = "No Movie Was Found"
                     })
                         .catch(er => { if (this.promise === p) this.error = er; });
                 }
