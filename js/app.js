@@ -39,7 +39,7 @@ function defaultRoute() {
     if (user) 
         {if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search";}
     else
-        {if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login";}
+        {if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login";}
 }
 
 
