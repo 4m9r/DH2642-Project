@@ -186,11 +186,15 @@ width: 400px;
 height:30px;
 border-radius: 5px;
 }
+
 .searchBut{
 width: 100px;
 height:30px;
 border-radius: 5px;
+box-shadow: 1px 1px yellow;
 }
+.searchBut:hover {background-color: rgb(211, 205, 205);}
+
 
 .searchResult{
 text-align: center;
@@ -358,4 +362,128 @@ legend{
   font-size: 15;
 }
 
+.inputbox{
+  height: 30px;
+  border-radius: 5px;
+  /* width: 300px; */
+  width:100%;
+  /* margin:auto; */
   
+}
+
+.inputdiv{
+  vertical-align: middle; 
+  align-content: center;
+  /* display: flex; */
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.authbutton{
+  height: 30px;
+  border-radius: 5px;
+  width: 100px;
+  box-shadow: 1px 1px yellow;
+}
+.authbutton:hover {background-color: rgb(211, 205, 205);}
+
+
+.authbuttonstyle{
+  width: 20%;
+  padding: 10px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  vertical-align: middle; 
+  align-content: center;
+}
+
+.funtext{
+  font-size: 16px;
+  color: #fbff00;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.titletext{
+  font-size: 32px;
+  color: #fbff00;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left:17.5%;
+  margin-bottom: 30px;
+  
+}
+
+.titletext2{
+  font-size: 32px;
+  color: #fbff00;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left:41.5%;
+  margin-bottom: 30px;
+}
+
+
+.authbox{
+  vertical-align: middle; 
+  align-content: center;
+  /* display: flex; */
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.authbox2{
+  vertical-align: middle; 
+  align-content: center;
+  /* display: flex; */
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.similarBut{
+  width: 150px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+}
+.similarBut:hover {background-color: rgb(211, 205, 205);}
+
+.listBut{
+  width: 200px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+}
+.listBut:hover {background-color: rgb(211, 205, 205);}
+
+.quizBut{
+  width: 150px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+}
+.quizBut:hover {background-color: rgb(211, 205, 205);}
+
+
+

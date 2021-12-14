@@ -4,17 +4,17 @@ function DetailsView(props) {
             <div class="detmoviecard">
                 <div class="detinfosection">
                     <div class="detailsbutton">
-                        <button
+                        <button class="listBut"
                         /*onClick={}
                         disabled={}*/
                         >
                             Add to my Favorites Movies!
                         </button>
 
-                        <button onClick={() => window.location.hash = "#rec"}>
+                        <button class="similarBut" onClick={() => window.location.hash = "#rec"}>
                             Find Similar Movies!
                         </button>
-                        <button onClick={() => window.location.hash = "#quiz"}>
+                        <button class="quizBut" onClick={() => window.location.hash = "#quiz"}>
                             Take a quiz
                         </button>
                     </div>
@@ -30,6 +30,8 @@ function DetailsView(props) {
                             </p>
                         </div>
                     </div>
+
+
 
 
                 </div>

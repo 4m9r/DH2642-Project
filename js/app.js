@@ -4,7 +4,6 @@ function App(props) {
 
         <div class="flexParent">
 
-
             <div class="mainConetent">
                 <div class="navbar">
                     <span class="logo">FilmBuff</span>
@@ -27,6 +26,8 @@ function App(props) {
         </div>
 
 
+
+
     );
 
 }
@@ -37,7 +38,7 @@ let user = auth.currentUser;
 // Not working 
 function defaultRoute() {
     if (user) { if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; }
-    else { if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; }
+    else { if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; }
 }
 
 
