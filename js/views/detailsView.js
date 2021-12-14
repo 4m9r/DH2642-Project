@@ -31,6 +31,8 @@ function DetailsView(props) {
                         </div>
                     </div>
 
+                    
+
 
 
 
