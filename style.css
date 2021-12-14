@@ -185,11 +185,14 @@ margin-left: 6px;
 width: 400px;
 height:30px;
 border-radius: 5px;
+
 }
 .searchBut{
 width: 100px;
 height:30px;
 border-radius: 5px;
+box-shadow: 1px 1px yellow;
+
 }
 
 .searchResult{
@@ -456,3 +459,26 @@ legend{
   padding: 10px;
 }
 
+.similarBut{
+  width: 150px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+}
+.similarBut:hover {background-color: rgb(211, 205, 205);}
+
+.listBut{
+  width: 200px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+}
+.listBut:hover {background-color: rgb(211, 205, 205);}
+
+.quizBut{
+  width: 150px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+}
+.quizBut:hover {background-color: rgb(211, 205, 205);}
