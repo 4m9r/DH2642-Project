@@ -31,6 +31,19 @@ function DetailsView(props) {
                         </div>
                     </div>
 
+                    <div class="detmovieheader">
+                        <img class="detimg" src={props.data.image || ""} />
+                        <h1>{props.data.title || "no information"}</h1>
+                        <h4>Year: {props.data.year || "no information"}, Director: {props.data.directors || "no information"}</h4>
+                        <span class="detminutes">{props.data.runtimeStr || "no information"}</span>
+                        <p class="detgenre">Genre: {props.data.genres || "no information"}</p>
+                        <div class="detmoviedesc">
+                            <p class="dettext">
+                                Plot: {props.data.plot || "no information"}
+                            </p>
+                        </div>
+                    </div>
+
 
                 </div>
                 <div class="detblurback">
