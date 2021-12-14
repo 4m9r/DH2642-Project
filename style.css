@@ -185,15 +185,16 @@ margin-left: 6px;
 width: 400px;
 height:30px;
 border-radius: 5px;
-
 }
+
 .searchBut{
 width: 100px;
 height:30px;
 border-radius: 5px;
 box-shadow: 1px 1px yellow;
-
 }
+.searchBut:hover {background-color: rgb(211, 205, 205);}
+
 
 .searchResult{
 text-align: center;
@@ -386,7 +387,10 @@ legend{
   height: 30px;
   border-radius: 5px;
   width: 100px;
+  box-shadow: 1px 1px yellow;
 }
+.authbutton:hover {background-color: rgb(211, 205, 205);}
+
 
 .authbuttonstyle{
   width: 20%;
