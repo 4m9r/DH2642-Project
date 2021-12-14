@@ -4,7 +4,6 @@ function App(props) {
 
         <div class="flexParent">
 
-
             <div class="mainConetent">
                 <div class="navbar">
                     <span class="logo">FilmBuff</span>
