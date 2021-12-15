@@ -506,7 +506,7 @@ legend{
 	color: yellow;
 	padding-top: 30px;
 	position: relative;
-  top: 40px; left: 40px;
+  margin: 40px;
 	max-width: 30%;
 	text-align: center;
 }
@@ -519,6 +519,12 @@ legend{
   display: inline-block;
   float: none;
   max-width: 100%;
+}
+
+.footer-button:hover {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
 }
 
 .profile-description {
