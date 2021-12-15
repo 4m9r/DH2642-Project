@@ -8,7 +8,6 @@ class UserModel {
         usersList = [],
         friendsList = [],
         currentFriend = 'anon',
-        friendData = [],
         quizList = [],
         userData = [],
         observers = [],
@@ -22,7 +21,6 @@ class UserModel {
         this.profilePic = profilePic;
         this.usersList = usersList;
         this.friendsList = friendsList;
-        this.friendData = friendData;
         this.currentFriend = currentFriend;
         this.userData = userData;
         this.quizList = quizList;
