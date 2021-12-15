@@ -1,7 +1,5 @@
 function ListCollectionView(props) {
 
-    console.log("Testing the lists: " + props.lists)
-
     return (
 
 
