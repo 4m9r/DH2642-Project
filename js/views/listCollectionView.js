@@ -1,5 +1,7 @@
 function ListCollectionView(props) {
 
+console.log("profile pic is: " + props.profilePic)
+
     return (
 
 

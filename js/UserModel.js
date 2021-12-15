@@ -75,9 +75,8 @@ class UserModel {
         this.notifyObservers();
     }
 
-    setCurrentFriend(friend, data) {
+    setCurrentFriend(friend) {
         this.currentFriend = friend;
-        this.friendData = data;
         this.notifyObservers();
     }
 
