@@ -80,6 +80,11 @@ class UserModel {
         this.notifyObservers();
     }
 
+    // setFriendData(data){
+    //     this.friendData = data;
+    //     this.notifyObservers();
+    // }
+
     setCurrentMovie(id) {
         if (this.currentMovie === id)
             return;
