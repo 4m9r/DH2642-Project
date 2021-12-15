@@ -83,7 +83,13 @@ function persistModel(model) {
 
     })
 
-
+    firebase.database().ref('/friends/').once('value').then(function (snapshot) {
+        snapshot.forEach((childSnapshot) => {
+            
+            model.setFriendData(childSnapshot.val().usersList);
+            
+        });
+    })
 
 
 
