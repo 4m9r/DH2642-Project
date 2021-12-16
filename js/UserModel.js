@@ -43,13 +43,20 @@ class UserModel {
         this.quizList = [];
         this.userData = [];
         this.totalScore = 0;
-        this.userNumber = 0;
         this.notifyObservers();
     }
 
 
     setQuizState(obj) {
         this.quizState = [...this.quizState, obj];
+        this.notifyObservers();
+    }
+    setQuiz(array) {
+        this.quizState = [...this.quizState, ...array]
+        this.notifyObservers();
+    }
+    setUserTotalScore(score) {
+        this.totalScore = this.totalScore + score;
         this.notifyObservers();
     }
     setUserNumber(num) {
@@ -64,21 +71,12 @@ class UserModel {
         this.notifyObservers();
     }
 
-    fetchUserData() {
-        // If model was updated, notify obs
-        fetchModel(this, () => this.notifyObservers());
-    }
-    // setUserID(uid) {
-    //     this.userID = uid;
+    // fetchUserData() {
+    //     // If model was updated, notify obs
+    //     fetchModel(this, () => this.notifyObservers());
     // }
 
-    //setUsername(name) {
-    //    this.username = name;
-    //}
-    setUserTotalScore(score) {
-        this.totalScore = this.totalScore + score;
-        this.notifyObservers();
-    }
+
 
     setProfilePic(source) {
         this.profilePic = source;
