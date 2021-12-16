@@ -1,6 +1,6 @@
 function SearchResultsView(props) {
 
-    if (props.searchResults.items) {
+    if (props.searchResults?.items) {
         return (<div class="results">
             {props.searchResults.items?.slice(0, 16).map(
                 function (item) {
