@@ -4,10 +4,18 @@ function signUp(model) {
   let email = document.getElementById("email");
   let password = document.getElementById("password");
   let username = document.getElementById("username");
-  const promise = auth.createUserWithEmailAndPassword(email.value, password.value).then(() => {
+  const promise = auth.createUserWithEmailAndPassword(email.value, password.value).then(userCredential => {
 
-    let user = auth.currentUser;
-
+    let user = userCredential.user;
+    model.clearModel();
+    firebase.database().ref("user").child(user.uid).set({  // object literal
+      currentMovie: model.currentMovie,
+      username: model.username,
+      quizState: model.quizState,
+      totalScore: model.totalScore,
+      userID: model.userID,
+      userNumber: model.userNumber
+    });
     //let databaseref = firebase.database().ref();
     // let user_data = {
     //   username: username

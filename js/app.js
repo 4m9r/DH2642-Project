@@ -15,9 +15,10 @@ const App = {
             defaultRoute();
         })
 
-        // this.model.fetchUserData();
+        this.model.fetchUserData();
     },
     render() {
+
         return (
             <div class="flexParent">
                 <div class="mainConetent">
