@@ -28,8 +28,6 @@ function persistModel(model) {
     model.addObserver(function () {
         if (loadingFromFirebase)
             return;
-        // console.log(auth.currentUser.uid)
-        // console.log(model.userID)
         if (auth.currentUser) {
             firebase.database().ref("user").child(auth.currentUser.uid).set({  // object literal
                 currentMovie: model.currentMovie,
