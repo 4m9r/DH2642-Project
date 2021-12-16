@@ -35,7 +35,8 @@ function persistModel(model) {
                 quizState: model.quizState,
                 totalScore: model.totalScore,
                 userID: model.userID,
-                userNumber: model.userNumber
+                userNumber: model.userNumber,
+                profilePic: model.profilePic
             });
             firebase.database().ref("learboard").child(model.userNumber).set({
                 username: model.username,
@@ -55,6 +56,7 @@ function persistModel(model) {
                     model.setUserNumber(data.val().userNumber || 0)
                     model.setUserTotalScore(data.val().totalScore || 0)
                     model.setQuiz(data.val().quizState || [])
+                    model.setProfilePic(dat.val().profilePic || null)
                 }
             }
             catch (e) {
