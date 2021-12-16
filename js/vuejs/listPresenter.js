@@ -4,7 +4,7 @@ function ListPresenter(props) {
         <div>
             <ListCollectionView
                 username={props.model.currentFriend.username}
-                profilePic={props.model.currentFriend.profilepic}
+                profilePic={props.model.currentFriend.profilePic}
             />
         </div>
     )

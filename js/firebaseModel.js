@@ -36,7 +36,8 @@ function persistModel(model) {
                 totalScore: model.totalScore,
                 userID: model.userID,
                 userNumber: model.userNumber,
-                profilePic: model.profilePic
+                profilePic: model.profilePic,
+                currentUser: model.currentUSer
             });
             firebase.database().ref("learderboard").child(model.userNumber).set({
                 username: model.username,
