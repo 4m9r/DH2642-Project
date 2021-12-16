@@ -1,46 +1,46 @@
 function ListCollectionView(props) {
 
 
-    let myTarget = (JSON.stringify(props.lists))
+    return (
 
-    console.log(myTarget)
+        <div>
 
-return (
+            <div class="card-container">
+                <span> <img src={props.profilePic} class="profile-pic-circle" /> </span>
 
-
-    <div>
-        <span> <img src={props.profilePic} height={100} width={100} /> </span>
-
-        <span style="vertical-align: top; display:inline-block">
-            <h3>{props.username}'s Lists</h3>
-            <p style="vertical-align: top;">this is the description</p>
-        </span>
-
-        {
-
-
-            // <div>
-
-
-            //     {target_copy.map(x=> 
-            //     <div class="listbox">
-            //         <span>
-            //             <p style="margin-bottom: 10px;"><b>{x.listname}</b></p>
-            //             {/* {x.map(movie => 
-            //                 <p> {movie} </p>
-            //                 )} */}
-
-            //         </span>
-            //     </div>
-            //     )}
+                <p>
+                    <b><h2 stlye="padding: 5px;">{props.username}</h2></b>
+                    <br />
+                    <div class="profile-description">Welcome to my profile, check out the movies I like!</div>
+                </p>
+                <br />
+                <div>
+                    <button class="footer-button">
+                        <img src="https://cdn-icons-png.flaticon.com/512/61/61342.png" height={25} style="padding-top: 5px;" />
+                        <p>Films</p>
+                    </button>
+                    <button class="footer-button">
+                        <img src="https://www.pngall.com/wp-content/uploads/4/Heart-Symbol-Transparent.png" height={25} style="padding-top: 5px;" />
+                        <p>Lists</p>
+                    </button>
+                    <button class="footer-button">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32441.png" height={25} style="padding-top: 5px;" />
+                        <p>Friends</p>
+                    </button>
+                </div>
+            </div>
 
 
-            // </div>
-        }
-    </div>
+            <div class="card-container" stlye="display: inline-block;">
+                <p> All the films watched: </p>
+                
+            </div>
 
-)
+
+        </div>
 
 
 
-        }
+    )
+
+}

@@ -15,7 +15,7 @@ function App(props) {
                 <Show hash="#details"> <DetailsPresenter model={props.model} /> </Show>
                 <Show hash="#user"> <ListPresenter model={props.model} /> </Show>
                 <Show hash="#rec"> <RecommendPresenter model={props.model} /> </Show>
-                <Show hash="#signup"> <SignUpPresenter model={props.model} /> </Show>
+                {/* <Show hash="#signup"> <SignUpPresenter model={props.model} /> </Show> */}
                 <Show hash="#login"> <LogInPresenter model={props.model} /> </Show>
                 <Show hash="#quiz"> <QuizPresenter model={props.model} /> </Show>
 

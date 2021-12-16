@@ -18,6 +18,10 @@ img{
 
 .menubutton {
   background-color: #fbff00;
+  align-items: center;
+  text-align: center;
+  vertical-align:auto;
+  font-family: 'Outfit', sans-serif;
   min-width: 157px;
   color: rgb(0, 0, 0);
   padding: 24px;
@@ -229,6 +233,15 @@ background-position: center;
 background-repeat: no-repeat;
 cursor: pointer;
 }
+
+.profile-pic-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  }
 
 .listbox {
 display: inline-block;
@@ -497,3 +510,43 @@ legend{
 .quizBut:hover {background-color: rgb(211, 205, 205);}
 
 
+<<<<<<< HEAD
+=======
+.card-container {
+	background-color: #5d5c6198;
+	border-radius: 8px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: yellow;
+	padding-top: 30px;
+	position: relative;
+  margin: 40px;
+	max-width: 30%;
+	text-align: center;
+}
+
+.footer-button {
+  font-family: 'Outfit', sans-serif;
+  color: teal;
+  border-radius: 5px;
+  width: 33%;
+  display: inline-block;
+  float: none;
+  max-width: 100%;
+}
+
+.footer-button:hover {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-description {
+  margin: 0 auto;
+  display: block;
+  color: rgb(228, 228, 228);
+  font-size: 12px;
+  text-align: center;
+  max-inline-size: 150px;
+  
+}
+>>>>>>> ba1b398d59e2e743b75bf596c8a93db39ee49816
