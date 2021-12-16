@@ -65,7 +65,7 @@ function persistModel(model) {
             loadingFromFirebase = false;
         })
 
-    firebase.database().ref("learderboard").once("value", function (data) {
+    firebase.database().ref("learderboard").on("value", function (data) {
         loadingFromFirebase = true;
         try {
             if (data.val())

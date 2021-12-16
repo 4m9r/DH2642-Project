@@ -1,6 +1,6 @@
 function LeaderboardView(props) {
     return <div>
-        * <p>Leader Board</p>
+        <p>Leader Board</p>
         <table>
             {props.userData.sort(compareScore).map(user => {
 
