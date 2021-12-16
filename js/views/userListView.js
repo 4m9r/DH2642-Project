@@ -5,9 +5,9 @@ function UserListView(props) {
             <div>
                 <p style="margin-bottom: 15px;color: white;"><b>Find out what others have been watching!</b></p>
 
-                {props.userFriends.map(x =>
+                {props.users.map(x =>
 
-                    <span class="friendslist-display" onClick={e=> (props.setCurrentFriendView(x), window.location.hash = "#user")}>
+                    <span key= {x.userID} class="friendslist-display" onClick={e=> (props.setCurrentFriendView(x), window.location.hash = "#user")}>
                         <img class="profile-pic" src={x.profilepic} />
                         <p class="userlist-name">{x.username}</p>
                     </span>

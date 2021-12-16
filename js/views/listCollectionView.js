@@ -24,8 +24,8 @@ function ListCollectionView(props) {
                         <p>Lists</p>
                     </button>
                     <button class="footer-button">
-                        <img src="https://cdn-icons-png.flaticon.com/512/32/32441.png" height={25} style="padding-top: 5px;" />
-                        <p>Friends</p>
+                        <img src="https://www.freeiconspng.com/thumbs/score-icon/high-score-png-icon-11.png" height={25} style="padding-top: 5px;" />
+                        <p>Score</p>
                     </button>
                 </div>
             </div>
