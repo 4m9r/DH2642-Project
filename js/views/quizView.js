@@ -1,6 +1,7 @@
 function QuizView(props) {
 
     let scoreCounter = 0;
+
     if (props.model.quizState.find((e) => e.movie === props.model.currentMovie))
         return <div class="finishMassage">
             Good job you! Your score for this movie is
@@ -13,6 +14,7 @@ function QuizView(props) {
                 Back to the main page
             </button>
         </div>
+
     if (props.model.currentMovieDetails.similars == null)
         return <div class="finishMassage">
             This movie does not have a quiz <br />
@@ -26,12 +28,13 @@ function QuizView(props) {
         </div>
 
     let similar1 = props.model.currentMovieDetails.similars[0]
-    let similar2 = props.model.currentMovieDetails.similars[1]
-    let similar3 = props.model.currentMovieDetails.similars[2]
+    let similar2 = props.model.currentMovieDetails.similars[7]
+    let similar3 = props.model.currentMovieDetails.similars[6]
 
     let theMovie = props.model.currentMovieDetails;
 
-    if (similar1 === undefined || similar2 === undefined || similar3 === undefined)
+    if (similar1 === undefined || similar2 === undefined || similar3 === undefined || theMovie.year === undefined ||
+        theMovie.directors === "" || similar1.directors === "" || similar2.directors === "" || similar3.directors === "")
         return <div class="finishMassage">
             This movie does not have a quiz <br />
 
@@ -82,15 +85,15 @@ function QuizView(props) {
                 <input type="radio" name="q4" id="q4o1" /><label for="q4o1">{parseInt(theMovie.imDbRating)}</label><br />
                 <input type="radio" name="q4" id="q4o2" /><label for="q4o2">{parseInt(theMovie.imDbRating) + 0.5}</label><br />
                 <input type="radio" name="q4" id="q4o3" /><label for="q4o3">{parseInt(theMovie.imDbRating) - 1}</label><br />
-                <input type="radio" name="q4" id="q4o4" /><label for="q4o4">{parseInt(theMovie.imDbRating) + 0.3}</label><br />
+                <input type="radio" name="q4" id="q4o4" /><label for="q4o4">{parseInt(theMovie.imDbRating) - 2}</label><br />
             </fieldset>
 
 
             <fieldset>
                 <legend>Which set of genres describe the movie "{props.model.currentMovieDetails.title}" best? </legend>
-                <input type="radio" name="q5" id="q5o1" /><label for="q5o1">{similar3.genres + " ,Musical"}</label><br />
-                <input type="radio" name="q5" id="q5o2" /><label for="q5o2">{similar1.genres + " ,Comedy"}</label><br />
-                <input type="radio" name="q5" id="q5o3" /><label for="q1o3">{similar2.genres + " ,Sci-Fi"}</label><br />
+                <input type="radio" name="q5" id="q5o1" /><label for="q5o1">{similar3.genres + ", Musical"}</label><br />
+                <input type="radio" name="q5" id="q5o2" /><label for="q5o2">{similar1.genres + ", Comedy"}</label><br />
+                <input type="radio" name="q5" id="q5o3" /><label for="q1o3">{similar2.genres + ", Sci-Fi"}</label><br />
                 <input type="radio" name="q5" id="q5o4" /><label for="q1o4">{theMovie.genres}</label><br />
             </fieldset>
 
