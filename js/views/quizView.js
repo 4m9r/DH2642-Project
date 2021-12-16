@@ -100,15 +100,15 @@ function QuizView(props) {
 
             <button class="quizButton" onClick={() => {
                 if (document.getElementById("q1o2").checked)
-                    scoreCounter = scoreCounter + 10;
+                    scoreCounter = scoreCounter + 20;
                 if (document.getElementById("q2o3").checked)
-                    scoreCounter = scoreCounter + 10;
+                    scoreCounter = scoreCounter + 20;
                 if (document.getElementById("q3o4").checked)
-                    scoreCounter = scoreCounter + 10;
+                    scoreCounter = scoreCounter + 20;
                 if (document.getElementById("q4o1").checked)
-                    scoreCounter = scoreCounter + 10;
+                    scoreCounter = scoreCounter + 20;
                 if (document.getElementById("q5o4").checked)
-                    scoreCounter = scoreCounter + 10;
+                    scoreCounter = scoreCounter + 20;
                 props.model.setUserTotalScore(scoreCounter);
                 props.model.setQuizState({ movie: props.model.currentMovie, score: scoreCounter })
             }
