@@ -30,13 +30,13 @@ class UserModel {
         this.userNumber = userNumber;
     }
 
-    setStateOfQuize(obj) {
-        this.quizState = [...this.quizState, obj]
-        this.notifyObservers();
-    }
 
     setQuizState(obj) {
         this.quizState = [...this.quizState, obj];
+        this.notifyObservers();
+    }
+    setUserNumber(num) {
+        this.userNumber = num;
         this.notifyObservers();
     }
 
