@@ -4,7 +4,7 @@ function UserListPresenter(props) {
         <div>
             <UserListView
                 username={props.model.username}
-                userFriends={props.model.friendsList}
+                users={props.model.users}
                 setCurrentFriendView = {e=> props.model.setCurrentFriend(e)}
                  />
                  

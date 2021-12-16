@@ -263,7 +263,14 @@ background-color:#cacaca;
 color: white;
 font-size: 14px;
 display: inline;
+max-inline-size: 60px;
 margin: 15px;
+}
+
+.userlist-score{
+  font-size: 10px;
+  color:rgb(251, 242, 155);
+  display:inline;
 }
 
 .friendslist-display{
