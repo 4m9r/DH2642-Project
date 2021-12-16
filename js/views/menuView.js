@@ -4,8 +4,7 @@ function MenuView(props) {
     <div class="menudrop">
       <button class="menubutton">Menu</button>
       <div class="menucontent">
-        <a onClick={() => window.alert("To be implemented")
-        }>Profile</a>
+        <a href="#profile">Profile</a>
         <a href="#leaderboard">Leaderboard</a>
         <a href="#search">Search for a movie</a>
         <a onClick={() => signOut()} href="#login">Log Out</a>
@@ -19,7 +18,7 @@ function MenuView(props) {
 // if user is logged in => Log Out option
 // if nobody is logged in => Log In option
 
-
+// onClick={() => window.alert("To be implemented")
 
 {/* <div class="menudrop">
 <button class="menubutton">Menu</button>
