@@ -64,9 +64,26 @@ function persistModel(model) {
         })
 
 
-    firebase.database().ref('/users/').once('value').then(function (snapshot) {
+    firebase.database().ref("user").child("ENbGmOTG0MY3RCskym96V5NYZQH3/usersList").once("value", function (data) {
+        try {
+            data.forEach(function (childNodes) {
+                model.addToUsersList(childNodes.val().listname || null);
+            })
+        }
+        catch (e) {
+            console.log(e);
+        }
+    })
+
+
+    firebase.database().ref('/user/ENbGmOTG0MY3RCskym96V5NYZQH3/profilepic').once('value').then(function (snapshot) {
+        model.setProfilePic(snapshot.val());
+    })
+
+
+    firebase.database().ref('/friends/').once('value').then(function (snapshot) {
         snapshot.forEach(function (childNodes) {
-            model.addToUsers(childNodes.val());
+            model.addToFriendList(childNodes.val());
         })
 
     })

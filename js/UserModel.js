@@ -5,8 +5,8 @@ class UserModel {
         username = null,
         quizState = [],
         profilePic = null,
-        list = [],
-        users = [],
+        usersList = [],
+        friendsList = [],
         currentFriend = 'anon',
         quizList = [],
         userData = [],
@@ -19,8 +19,8 @@ class UserModel {
         this.userID = userID;
         this.username = username;
         this.profilePic = profilePic;
-        this.list = list;
-        this.users = users;
+        this.usersList = usersList;
+        this.friendsList = friendsList;
         this.currentFriend = currentFriend;
         this.userData = userData;
         this.quizList = quizList;
@@ -37,8 +37,8 @@ class UserModel {
         this.username = null;
         this.quizState = [];
         this.profilePic = null;
-        this.list = [];
-        this.users = [];
+        this.usersList = [];
+        this.friendsList = [];
         this.currentFriend = 'anon';
         this.quizList = [];
         this.userData = [];
@@ -90,8 +90,8 @@ class UserModel {
         this.notifyObservers();
     }
 
-    addToUsers(name) {
-        this.users = [...this.friendsList, name];
+    addToFriendList(name) {
+        this.friendsList = [...this.friendsList, name];
         this.notifyObservers();
     }
 
@@ -99,6 +99,11 @@ class UserModel {
         this.currentFriend = friend;
         this.notifyObservers();
     }
+
+    // setFriendData(data){
+    //     this.friendData = data;
+    //     this.notifyObservers();
+    // }
 
     setCurrentMovie(id) {
         if (this.currentMovie === id)
