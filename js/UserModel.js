@@ -12,7 +12,8 @@ class UserModel {
         userData = [],
         observers = [],
         totalScore = 0,
-        userNumber = 0) {
+        userNumber = 0,
+        leaderboardData = []) {
 
         this.quizState = quizState
         this.currentMovie = currentMovie;
@@ -28,6 +29,7 @@ class UserModel {
         this.quizState = quizState;
         this.totalScore = totalScore;
         this.userNumber = userNumber;
+        this.leaderboardData = leaderboardData;
     }
 
     // Use with great care
@@ -46,6 +48,9 @@ class UserModel {
         this.notifyObservers();
     }
 
+    setLeaderboard(data) {
+        this.leaderboardData = data;
+    }
 
     setQuizState(obj) {
         this.quizState = [...this.quizState, obj];
