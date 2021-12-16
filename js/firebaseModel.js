@@ -56,7 +56,7 @@ function persistModel(model) {
                     model.setUserNumber(data.val().userNumber || 0)
                     model.setUserTotalScore(data.val().totalScore || 0)
                     model.setQuiz(data.val().quizState || [])
-                    model.setProfilePic(dat.val().profilePic || null)
+                    model.setProfilePic("https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" || null)
                 }
             }
             catch (e) {
