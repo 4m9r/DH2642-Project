@@ -26,6 +26,7 @@ function SignUpView(props) {
       <div class="authbuttonstyle">
         <button class="authbutton" onclick={() => signUp(props.model)} > Sign Up </button>
       </div>
+      <a class="funtext" href = "#login">Already have an account?</a>
     </div>
 
 
