@@ -1,7 +1,7 @@
-function LeaderBoardPresenter(props) {
+function LeaderboardPresenter(props) {
     return (
         <div>
-            <LeaderBoardView/>
+            <LeaderboardView/>
         </div>
     );
 }

@@ -32,7 +32,7 @@ const App = {
                     <Show hash="#rec"> <RecommendPresenter model={this.model} /> </Show>
                     <Show hash="#signup"> <SignUpPresenter model={this.model} /> </Show>
                     <Show hash="#login"> <LogInPresenter model={this.model} /> </Show>
-                    <Show hash="#leaderboard"> <LeaderBoardPresenter model={this.model} /> </Show>
+                    <Show hash="#leaderboard"> <LeaderboardPresenter model={this.model} /> </Show>
                     <Show hash="#quiz"> <QuizPresenter model={this.model} /> </Show>
 
                 </div>

@@ -1,4 +1,4 @@
-function LeaderBoardView(props) {
+function LeaderboardView(props) {
     return <div>
         <p>Leader Board</p>
         <table>
