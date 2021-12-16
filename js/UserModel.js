@@ -30,6 +30,23 @@ class UserModel {
         this.userNumber = userNumber;
     }
 
+    // Use with great care
+    clearModel() {
+        this.currentMovie = null;
+        this.userID = null;
+        this.username = null;
+        this.quizState = [];
+        this.profilePic = null;
+        this.usersList = [];
+        this.friendsList = [];
+        this.currentFriend = 'anon';
+        this.quizList = [];
+        this.userData = [];
+        this.totalScore = 0;
+        this.userNumber = 0;
+        this.notifyObservers();
+    }
+
 
     setQuizState(obj) {
         this.quizState = [...this.quizState, obj];
@@ -45,6 +62,11 @@ class UserModel {
         this.username = name;
         this.userNumber = this.userNumber + 1;
         this.notifyObservers();
+    }
+
+    fetchUserData() {
+        // If model was updated, notify obs
+        fetchModel(this, () => this.notifyObservers());
     }
     // setUserID(uid) {
     //     this.userID = uid;
