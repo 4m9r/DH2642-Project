@@ -16,24 +16,10 @@ function signUp(model) {
       userID: model.userID,
       userNumber: model.userNumber
     });
-    //let databaseref = firebase.database().ref();
-    // let user_data = {
-    //   username: username
-    //   //useruid: user.uid
-    // }
-    //model.setUsername(username.value);
-    // model.setUserID(user.uid);
+
     model.setUser(user.uid, username.value);
     console.log(model)
-    // firebase.database().ref("users").child(user.uid).set(user_data);
-    //firebase.database().ref("film-buff-33fbc-default-rtdb").child("user/" + user.uid).set(user_data); 
-    //firebase.database().ref("user").child(user.uid).set(user_data); 
 
-    //firebase.database().ref("user").child().set(user.uid);
-
-    //firebase.database().ref().child('user/' + user.uid).set(user_data);
-    //databaseref("users").child(user.uid).set(user_data);
-    //databaseref.child('user/' + user.uid).set(user_data); 
   });
   promise.catch(e => alert(e.message));
 
