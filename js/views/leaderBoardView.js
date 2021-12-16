@@ -2,13 +2,12 @@ function LeaderboardView(props) {
     return <div>
         <p>Leader Board</p>
         <table>
-            {props.userData.sort(compareScore).map(e => {
+            {props.userData.sort(compareScore).map(user => {
 
-                return <tr><td>{e.user}</td><td>{e.score}</td></tr>
+                return <tr><td>{user.username}</td><td>{user.totalScore}</td></tr>
 
             })
             }
-
         </table>
     </div>
 
@@ -16,9 +15,9 @@ function LeaderboardView(props) {
 }
 
 function compareScore(a, b) {
-    if (a.score < b.score)
+    if (a.totalScore < b.totalScore)
         return 1;
-    else if (a.score > b.score)
+    else if (a.totalScore > b.totalScore)
         return -1;
     else
         return 0;
