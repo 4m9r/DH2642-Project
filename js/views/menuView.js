@@ -6,6 +6,7 @@ function MenuView(props) {
       <div class="menucontent">
         <a onClick={() => window.alert("To be implemented")
         }>Profile</a>
+        <a href="#leaderboard">Leaderboard</a>
         <a href="#search">Search for a movie</a>
         <a onClick={() => signOut()} href="#login">Log Out</a>
       </div>
