@@ -37,7 +37,7 @@ function persistModel(model) {
                 userID: model.userID,
                 userNumber: model.userNumber
             });
-            firebase.database().ref("learboard").child(model.userNumber).set({
+            firebase.database().ref("learderboard").child(model.userNumber).set({
                 username: model.username,
                 totalScore: model.totalScore
             })
@@ -63,13 +63,24 @@ function persistModel(model) {
             loadingFromFirebase = false;
         })
 
+    firebase.database().ref("learderboard").once("value", function (data) {
+        loadingFromFirebase = true;
+        try {
+            if (data.val())
+                model.setLeaderboard(data.val() || []);
+        }
+        catch (e) {
+            console.log(e)
+        }
+        loadingFromFirebase = false;
+    });
 
     firebase.database().ref('/user/').once('value').then(function (snapshot) {
         snapshot.forEach(function (childNodes) {
             model.addToUsers(childNodes.val());
         })
 
-    })
+    });
 
 
 
