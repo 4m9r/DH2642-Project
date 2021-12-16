@@ -35,7 +35,8 @@ function persistModel(model) {
                 quizState: model.quizState,
                 totalScore: model.totalScore,
                 userID: model.userID,
-                userNumber: model.userNumber
+                userNumber: model.userNumber,
+                profilePic: model.profilePic
             });
             firebase.database().ref("learderboard").child(model.userNumber).set({
                 username: model.username,
@@ -55,6 +56,7 @@ function persistModel(model) {
                     model.setUserNumber(data.val().userNumber || 0)
                     model.setUserTotalScore(data.val().totalScore || 0)
                     model.setQuiz(data.val().quizState || [])
+                    model.setProfilePic("https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" || null)
                 }
             }
             catch (e) {
