@@ -1,11 +1,35 @@
+let loadingFromFirebase = false;
+
+function fetchModel(model, onSuccess) {
+    const auth = firebase.auth();
+    if (auth.currentUser)
+        firebase.database().ref("user").child(auth.currentUser.uid).once("value", function (data) {
+            loadingFromFirebase = true;
+            try {
+                if (data.val()) {
+                    model.setCurrentMovie(data.val().currentMovie || null);
+                    model.setUser(data.val().userID || null,
+                        data.val().username || null)
+                    model.setUserNumber(data.val().userNumber || 0)
+                    model.setQuizState(data.val().quizState || [])
+                    model.setUserTotalScore(data.val().totalScore || 0)
+                    onSuccess();
+                }
+            }
+            catch (e) {
+                console.log(e);
+            }
+            loadingFromFirebase = false;
+        })
+}
+
 function persistModel(model) {
     const auth = firebase.auth();
-    let loadingFromFirebase = false;
     model.addObserver(function () {
         if (loadingFromFirebase)
             return;
-        console.log(auth.currentUser.uid)
-        console.log(model.userID)
+        // console.log(auth.currentUser.uid)
+        // console.log(model.userID)
         if (auth.currentUser) {
             firebase.database().ref("user").child(auth.currentUser.uid).set({  // object literal
                 currentMovie: model.currentMovie,
@@ -23,7 +47,7 @@ function persistModel(model) {
     });
 
     if (auth.currentUser)
-        firebase.database().ref("user").child(auth.currentUser.uid).child("userModel").on("value", function (data) {
+        firebase.database().ref("user").child(auth.currentUser.uid).on("value", function (data) {
             loadingFromFirebase = true;
             try {
                 if (data.val()) {
@@ -66,7 +90,7 @@ function persistModel(model) {
 
     })
 
-    
+
 
 
 
