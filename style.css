@@ -555,3 +555,25 @@ legend{
   max-inline-size: 150px;
   
 }
+
+
+.lead{
+  color: yellow;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 20%;
+  font-size: 19px;
+  text-align: center;
+}
+
+table {
+  color:white;
+  font-size: 18px;
+  border : solid yellow;
+  text-align: center;
+}
