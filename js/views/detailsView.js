@@ -5,8 +5,8 @@ function DetailsView(props) {
                 <div class="detinfosection">
                     <div class="detailsbutton">
                         <button class="listBut"
-                        /*onClick={}
-                        disabled={}*/
+                        onClick={props.addToList(props.currentMovie)}
+                        
                         >
                             Add to my Favorites Movies!
                         </button>

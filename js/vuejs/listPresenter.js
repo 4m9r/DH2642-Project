@@ -5,6 +5,7 @@ function ListPresenter(props) {
             <ListCollectionView
                 username={props.model.currentFriend.username}
                 profilePic={props.model.currentFriend.profilePic}
+                score={props.model.currentFriend.totalScore}
             />
         </div>
     )

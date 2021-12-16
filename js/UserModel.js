@@ -3,9 +3,10 @@ class UserModel {
         currentMovie = null,
         userID = null,
         username = null,
-        quizState = [],
         profilePic = null,
-        list = [],
+        profileDescription = null,
+        quizState = [],
+        favourites = [],
         users = [],
         currentFriend = 'anon',
         quizList = [],
@@ -20,7 +21,8 @@ class UserModel {
         this.userID = userID;
         this.username = username;
         this.profilePic = profilePic;
-        this.list = list;
+        this.profileDescription = profileDescription;
+        this.favourites = favourites;
         this.users = users;
         this.currentFriend = currentFriend;
         this.userData = userData;
@@ -37,9 +39,10 @@ class UserModel {
         this.currentMovie = null;
         this.userID = null;
         this.username = null;
+        this.profileDescription = null;
         this.quizState = [];
         this.profilePic = null;
-        this.list = [];
+        this.favourites = [];
         this.users = [];
         this.currentFriend = 'anon';
         this.quizList = [];
@@ -88,8 +91,14 @@ class UserModel {
         this.notifyObservers();
     }
 
-    addTolist(data) {
-        this.list = [...this.list, data];
+    setProfileDescription(description){
+        this.profileDescription = description;
+        this.notifyObservers();
+
+    }
+
+    addToFavourites(movie) {
+        this.favourites = [...this.favourites, movie];
         this.notifyObservers();
     }
 
