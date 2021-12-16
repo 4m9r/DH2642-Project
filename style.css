@@ -185,7 +185,8 @@ margin-left: 6px;
 }
 
 .searchBox{
-width: 400px;
+width: 35%;
+min-width: 150px;
 height:30px;
 border-radius: 5px;
 }
@@ -277,7 +278,7 @@ flex-flow: row;
 width: 100%;
 height: 100%;
 /* background: linear-gradient(to left, #0d0d0c 50%,#6b6b67 100%, transparent 100%); */
-background-color: #242422;
+background-color: #242422; /* #242422 #161515 */
 
 }
 
@@ -315,7 +316,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding-left: 24px;
-background-color: teal;
+background-color: #18181f; /* #18181f #323844 #2e323a*/
 color: #fff;
 position: sticky;
 top: 0;
@@ -510,8 +511,6 @@ legend{
 .quizBut:hover {background-color: rgb(211, 205, 205);}
 
 
-<<<<<<< HEAD
-=======
 .card-container {
 	background-color: #5d5c6198;
 	border-radius: 8px;
@@ -549,4 +548,3 @@ legend{
   max-inline-size: 150px;
   
 }
->>>>>>> ba1b398d59e2e743b75bf596c8a93db39ee49816
