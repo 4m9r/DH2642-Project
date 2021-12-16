@@ -39,7 +39,7 @@ let user = auth.currentUser;
 
 // Not working 
 function defaultRoute() {
-    if (user) { if (!(["#search", "#details", "#user", "#signup", "#login", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; }
+    if (user) { if (!(["#search", "#details", "#user", "#rec", "#quiz"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; }
     else { if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; }
 }
 
