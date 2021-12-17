@@ -1,5 +1,11 @@
 function ListCollectionView(props) {
 
+    function listing(){
+    if (!props.favourites) { return <p>Oops, looks like there is nothing here!</p>} else {
+        return <p> {props.favourites.map(f => <span><img src={f.image} height={40}/>{f.title}</span>)} </p>
+    }}
+
+
 
     return (
 
@@ -23,12 +29,13 @@ function ListCollectionView(props) {
             </div>
 
 
+i
+
             <span class="profile-card" style="display: inline-block;">
                 <p> My Favourites: </p>
                     
-                        {/* <p> {props.favourites.map(f => <span><img src={f.image} height={40}/>{f.title}</span>)} </p> */}
+                         {listing()}
                     
-
             </span>
 
 
