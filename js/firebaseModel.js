@@ -38,14 +38,17 @@ function persistModel(model) {
                 userNumber: model.userNumber,
                 profilePic: model.profilePic,
                 favourites: model.favourites,
+                userNumber: model.userNumber
 
             });
-            firebase.database().ref("learderboard").child(model.userNumber).set({
-                username: model.username,
-                totalScore: model.totalScore
-            })
-            firebase.database().ref("userNumber").set({
-                userNumber: model.userNumber
+            if (model.userNumber != null)
+                firebase.database().ref("learderboard").child(model.userNumber).set({
+                    username: model.username,
+                    totalScore: model.totalScore
+                })
+
+            firebase.database().ref("totalUser").set({
+                total: model.totalUser
 
             })
         }
@@ -64,6 +67,7 @@ function persistModel(model) {
                     model.setQuiz(data.val().quizState || [])
                     model.setProfilePic(data.val().profilePic || "https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg")
                     model.setFavourites(data.val().favourites || [])
+                    model.setUserNumber(data.val().userNumber || null)
 
                 }
             }
@@ -85,11 +89,11 @@ function persistModel(model) {
         loadingFromFirebase = false;
     });
 
-    firebase.database().ref("userNumber").on("value", function (data) {
+    firebase.database().ref("totalUser").once("value", function (data) {
         loadingFromFirebase = true;
         try {
             if (data.val())
-                model.setUserNumber(data.val().userNumber || []);
+                model.setTotalUser(data.val().total || null);
         }
         catch (e) {
             console.log(e)
