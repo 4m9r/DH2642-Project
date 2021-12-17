@@ -8,13 +8,13 @@ function signUp(model) {
 
     let user = userCredential.user;
     model.clearModel();
-    firebase.database().ref("user").child(user.uid).set({  // object literal
-      currentMovie: model.currentMovie,
-      username: model.username,
-      quizState: model.quizState,
-      totalScore: model.totalScore,
-      userID: model.userID,
-    });
+    // firebase.database().ref("user").child(user.uid).set({  // object literal
+    //   currentMovie: model.currentMovie,
+    //   username: model.username,
+    //   quizState: model.quizState,
+    //   totalScore: model.totalScore,
+    //   userID: model.userID,
+    // });
 
     model.setUser(user.uid, username.value);
     console.log(model)

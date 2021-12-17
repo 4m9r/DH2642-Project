@@ -12,8 +12,9 @@ class UserModel {
         userData = [],
         observers = [],
         totalScore = 0,
-        userNumber = 0,
-        leaderboardData = []) {
+        totalUser = 0,
+        leaderboardData = [],
+        userNumber = null) {
 
         this.quizState = quizState
         this.currentMovie = currentMovie;
@@ -28,8 +29,9 @@ class UserModel {
         this.observers = observers;
         this.quizState = quizState;
         this.totalScore = totalScore;
-        this.userNumber = userNumber;
+        this.totalUser = totalUser;
         this.leaderboardData = leaderboardData;
+        this.userNumber = userNumber;
     }
 
     // Use with great care
@@ -45,8 +47,11 @@ class UserModel {
         this.quizList = [];
         this.userData = [];
         this.totalScore = 0;
+        this.userNumber = null;
         this.notifyObservers();
     }
+
+
 
     setLeaderboard(data) {
         this.leaderboardData = data;
@@ -64,16 +69,24 @@ class UserModel {
         this.totalScore = this.totalScore + score;
         this.notifyObservers();
     }
-    setUserNumber(num) {
-        this.userNumber = num;
-        console.log(this.userNumber)
+
+
+    setUserNumber(number) {
+        if (this.userNumber == null)
+            this.userNumber = number;
+        this.notifyObservers();
+    }
+    setTotalUser(num) {
+        this.totalUser = num;
+
         this.notifyObservers();
     }
 
     setUser(uid, name) {
         this.userID = uid;
         this.username = name;
-        this.setUserNumber(Number(this.userNumber) + 1);
+        this.setUserNumber(this.totalUser);
+        this.setTotalUser(Number(this.totalUser) + 1);
         this.notifyObservers();
     }
 
