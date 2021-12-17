@@ -39,7 +39,7 @@ class UserModel {
         this.username = null;
         this.quizState = [];
         this.profilePic = null;
-        this.favourites = [];
+        // this.favourites = [];
         this.users = [];
         this.currentFriend = 'anon';
         this.quizList = [];
@@ -88,8 +88,14 @@ class UserModel {
         this.notifyObservers();
     }
 
+    setFavourites(movie){
+        this.favourites=  movie;
+        this.notifyObservers();
+    }
+
     addToFavourites(movie) {
         if(this.favourites.includes(movie)){
+            this.notifyObservers();
            return;
         } 
         else{

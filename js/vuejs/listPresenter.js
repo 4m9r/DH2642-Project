@@ -1,6 +1,7 @@
 function ListPresenter(props) {
+
     
-    return (
+    return(
         <div>
             <ListCollectionView
                 username={props.model.currentFriend.username}
