@@ -637,9 +637,19 @@ tr{
   margin-left: 5px;
 }
 .td-score{
-  color: #0d0d0c;
+  color: white;
   margin-right: 5px;
 }
 .td-name{
   margin-left: 5px;
+}
+.icon{
+  height: 32px;
+  width: 32px;
+}
+
+.siteName{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
