@@ -3,7 +3,7 @@ function UserListView(props) {
 
     return (
         <div>
-            <div style="overflow-y: scroll;">
+            <div style="overflow-y: hidden;">
                 <p style="margin-bottom: 15px;color: white;"><b>Find out what others have been watching!</b></p>
 
                 {((props.users).filter(f=> f.userNumber!=0)).map(x =>
