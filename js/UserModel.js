@@ -98,8 +98,13 @@ class UserModel {
     }
 
     addToFavourites(movie) {
+        if(this.favourites.includes(movie)){
+            this.notifyObservers();
+        } 
+        else{
         this.favourites = [...this.favourites, movie];
         this.notifyObservers();
+        }
     }
 
     addToUsers(name) {
@@ -111,11 +116,6 @@ class UserModel {
         this.currentFriend = friend;
         this.notifyObservers();
     }
-
-    // setFriendData(data){
-    //     this.friendData = data;
-    //     this.notifyObservers();
-    // }
 
     setCurrentMovie(id) {
         if (this.currentMovie === id)

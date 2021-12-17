@@ -24,8 +24,11 @@ function ListCollectionView(props) {
 
 
             <span class="profile-card" style="display: inline-block;">
-                <p> All the films watched: </p>
-                
+                <p> My Favourites: </p>
+                    <ul>
+                         {/* {props.favourites.map(f => <li>{f.titlename}</li>)} */}
+                    </ul>
+
             </span>
 
 

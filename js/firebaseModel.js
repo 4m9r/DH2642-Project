@@ -37,8 +37,7 @@ function persistModel(model) {
                 userID: model.userID,
                 userNumber: model.userNumber,
                 profilePic: model.profilePic,
-                favourites: model. favourites,
-                currentUser: model.currentUSer,
+                favourites: model.favourites,
                 profileDescription: model.profileDescription,
             });
             firebase.database().ref("learderboard").child(model.userNumber).set({
@@ -61,7 +60,6 @@ function persistModel(model) {
                     model.setQuiz(data.val().quizState || [])
                     model.setProfilePic("https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" || null)
                     model.setProfileDesription("Welcome to my page!")
-                    model.addToFavourites(data.val().favourites || null)
                 }
             }
             catch (e) {
