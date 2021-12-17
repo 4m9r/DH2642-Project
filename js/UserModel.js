@@ -69,13 +69,14 @@ class UserModel {
     }
     setUserNumber(num) {
         this.userNumber = num;
+        console.log(this.userNumber)
         this.notifyObservers();
     }
 
     setUser(uid, name) {
         this.userID = uid;
         this.username = name;
-        this.userNumber = this.userNumber + 1;
+        this.setUserNumber(Number(this.userNumber) + 1);
         this.notifyObservers();
     }
 
@@ -91,7 +92,7 @@ class UserModel {
         this.notifyObservers();
     }
 
-    setProfileDescription(description){
+    setProfileDescription(description) {
         this.profileDescription = description;
         this.notifyObservers();
 
@@ -99,6 +100,7 @@ class UserModel {
 
     addToFavourites(movie) {
         this.favourites = [...this.favourites, movie];
+        console.log(this.favourites)
         this.notifyObservers();
     }
 
