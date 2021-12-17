@@ -11,7 +11,7 @@ function ListCollectionView(props) {
                 <p>
                     <b><h2 style="padding: 5px;">{props.username}</h2></b>
                     <br />
-                    <div class="profile-description">Welcome to my profile, check out the movies I like!</div>
+                    <div class="profile-description">Welcome to my page!</div>
                 </p>
                 <br />
                 <div>
@@ -25,9 +25,9 @@ function ListCollectionView(props) {
 
             <span class="profile-card" style="display: inline-block;">
                 <p> My Favourites: </p>
-                    <ul>
-                         {/* {props.favourites.map(f => <li>{f.titlename}</li>)} */}
-                    </ul>
+                    
+                        {/* <p> {props.favourites.map(f => <span><img src={f.image} height={40}/>{f.title}</span>)} </p> */}
+                    
 
             </span>
 
