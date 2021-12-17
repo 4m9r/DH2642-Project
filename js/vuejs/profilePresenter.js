@@ -10,6 +10,7 @@ function ProfilePresenter(props) {
                 description={props.model.profileDescription}
                 score={props.model.totalScore}
                 favourites={props.model.favourites}
+                movieChosen={id => props.model.setCurrentMovie(id)}
 
 
             />

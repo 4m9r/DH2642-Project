@@ -590,7 +590,7 @@ legend{
 
 .profile-movie{
   margin: 0 auto;
-  
+  cursor: pointer;
   color: rgb(228, 228, 228);
   font-size: 12px;
   text-align: center;
