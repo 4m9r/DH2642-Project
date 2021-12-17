@@ -1,10 +1,11 @@
 function LeaderboardView(props) {
-    return <div class = "lead">
+    return <div class="lead">
         <p>Leaderboard</p>
         <table>
             {props.userData.sort(compareScore).map(user => {
 
-                return <tr><td>{user.username}</td><td><td></td></td><td>{user.totalScore}</td></tr>
+                return <tr><td class="td-name">{user.username}</td>
+                    <td class="td-score">{user.totalScore}<img class="leaerboard-pic" src="https://www.freeiconspng.com/uploads/score-icon-8.png" /></td></tr>
 
             })
             }
