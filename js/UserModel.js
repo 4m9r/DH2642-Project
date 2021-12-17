@@ -4,7 +4,6 @@ class UserModel {
         userID = null,
         username = null,
         profilePic = null,
-        profileDescription = null,
         quizState = [],
         favourites = [],
         users = [],
@@ -21,7 +20,6 @@ class UserModel {
         this.userID = userID;
         this.username = username;
         this.profilePic = profilePic;
-        this.profileDescription = profileDescription;
         this.favourites = favourites;
         this.users = users;
         this.currentFriend = currentFriend;
@@ -39,10 +37,9 @@ class UserModel {
         this.currentMovie = null;
         this.userID = null;
         this.username = null;
-        this.profileDescription = null;
         this.quizState = [];
         this.profilePic = null;
-        this.favourites = [];
+        // this.favourites = [];
         this.users = [];
         this.currentFriend = 'anon';
         this.quizList = [];
@@ -92,16 +89,21 @@ class UserModel {
         this.notifyObservers();
     }
 
-    setProfileDescription(description) {
-        this.profileDescription = description;
+    setFavourites(movie) {
+        this.favourites = movie;
         this.notifyObservers();
-
     }
 
     addToFavourites(movie) {
-        this.favourites = [...this.favourites, movie];
-        console.log(this.favourites)
-        this.notifyObservers();
+        if (this.favourites.includes(movie)) {
+            this.notifyObservers();
+            return;
+        }
+        else {
+            this.favourites = [...this.favourites, movie];
+            console.log(this.favourites)
+            this.notifyObservers();
+        }
     }
 
     addToUsers(name) {
@@ -113,11 +115,6 @@ class UserModel {
         this.currentFriend = friend;
         this.notifyObservers();
     }
-
-    // setFriendData(data){
-    //     this.friendData = data;
-    //     this.notifyObservers();
-    // }
 
     setCurrentMovie(id) {
         if (this.currentMovie === id)

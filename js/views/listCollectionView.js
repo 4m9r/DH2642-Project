@@ -1,5 +1,11 @@
 function ListCollectionView(props) {
 
+    function listing(){
+    if (!props.favourites) { return <p>Oops, looks like there is nothing here!</p>} else {
+        return <p> {props.favourites.map(f => <p><img src={f.image} height={40}/>{f.title}</p>)} </p>
+    }}
+
+
 
     return (
 
@@ -11,7 +17,7 @@ function ListCollectionView(props) {
                 <p>
                     <b><h2 style="padding: 5px;">{props.username}</h2></b>
                     <br />
-                    <div class="profile-description">Welcome to my profile, check out the movies I like!</div>
+                    <div class="profile-description">Welcome to my page!</div>
                 </p>
                 <br />
                 <div>
@@ -23,9 +29,13 @@ function ListCollectionView(props) {
             </div>
 
 
+i
+
             <span class="profile-card" style="display: inline-block;">
-                <p> All the films watched: </p>
-                
+                <p> My Favourites: </p>
+                    
+                         {listing()}
+                    
             </span>
 
 

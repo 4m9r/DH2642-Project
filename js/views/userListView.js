@@ -2,11 +2,11 @@ function UserListView(props) {
 
 
     return (
-        <div>
-            <div style="overflow-y: hidden;">
+        
+            <div class="userlist">
                 <p style="margin-bottom: 15px;color: white;"><b>Find out what others have been watching!</b></p>
 
-                {((props.users).filter(f=> f.userNumber!=0)).map(x =>
+                {((props.users).filter(f=> f.userID)).map(x =>
 
                     <span class="userlist-display" onClick={e=> (props.setCurrentFriendView(x), window.location.hash = "#user")}>
                         <img class="profile-pic" src={x.profilePic} />
@@ -20,7 +20,7 @@ function UserListView(props) {
                 )}
 
             </div>
-        </div>
+        
     )
 
 }

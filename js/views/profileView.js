@@ -3,7 +3,7 @@ function ProfileView(props) {
 
         <div>
 
-            <div class="card-container">
+            <div class="profile-card">
                 
 
                 <p>
@@ -29,7 +29,7 @@ function ProfileView(props) {
             </div>
 
 
-            <div class="card-container" stlye="display: inline-block;">
+            <div class="profile-card" stlye="display: inline-block;">
                 <p> All the films watched: </p>
                 
             </div>

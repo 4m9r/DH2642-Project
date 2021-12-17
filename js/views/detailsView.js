@@ -4,11 +4,8 @@ function DetailsView(props) {
             <div class="detmoviecard">
                 <div class="detinfosection">
                     <div class="detailsbutton">
-                        <button class="listBut"
-                            onClick={props.addToList}
-                            disabled={props.isMovieAdded}
-
-
+                        <button class="listBut" disabled={props.isMovieInFavourites}
+                            onClick={() => props.addToList(props.data)}
                         >
                             Add to my Favorites Movies!
                         </button>
