@@ -21,10 +21,7 @@ const App = {
         return (
             <div class="flexParent">
                 <div class="mainConetent">
-                    {this.user && <div class="navbar">
-                        <span class="logo">FilmBuff</span>
-                        <span > <MenuView /></span>
-                    </div>}
+                    {this.user && <NavPresenter/>}
                     {/* <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
                     <Show hash="#search"> <SearchPresenter model={this.model} /> </Show>
                     <Show hash="#details"> <DetailsPresenter model={this.model} /> </Show>
