@@ -35,15 +35,18 @@ function persistModel(model) {
                 quizState: model.quizState,
                 totalScore: model.totalScore,
                 userID: model.userID,
-                userNumber: model.userNumber,
-                profilePic: model.profilePic,
-                favourites: model. favourites,
-                currentUser: model.currentUSer,
-                profileDescription: model.profileDescription,
+                // profilePic: model.profilePic,
+                // favourites: model.favourites,
+                // currentUser: model.currentUSer,
+                //profileDescription: model.profileDescription,
             });
             firebase.database().ref("learderboard").child(model.userNumber).set({
                 username: model.username,
                 totalScore: model.totalScore
+            })
+            firebase.database().ref("userNumber").set({
+                userNumber: model.userNumber
+
             })
         }
     });
@@ -59,9 +62,9 @@ function persistModel(model) {
                     model.setUserNumber(data.val().userNumber || 0)
                     model.setUserTotalScore(data.val().totalScore || 0)
                     model.setQuiz(data.val().quizState || [])
-                    model.setProfilePic("https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" || null)
-                    model.setProfileDesription("Welcome to my page!")
-                    model.addToFavourites(data.val().favourites || null)
+                    // model.setProfilePic("https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" || null)
+                    //model.setProfileDesription("Welcome to my page!")
+                    // model.addToFavourites(data.val().favourites || null)
                 }
             }
             catch (e) {
@@ -82,12 +85,26 @@ function persistModel(model) {
         loadingFromFirebase = false;
     });
 
+    firebase.database().ref("userNumber").on("value", function (data) {
+        loadingFromFirebase = true;
+        try {
+            if (data.val())
+                model.setUserNumber(data.val().userNumber || []);
+        }
+        catch (e) {
+            console.log(e)
+        }
+        loadingFromFirebase = false;
+    });
+
     firebase.database().ref('/user/').once('value').then(function (snapshot) {
         snapshot.forEach(function (childNodes) {
             model.addToUsers(childNodes.val());
         })
 
     });
+
+
 
 
 

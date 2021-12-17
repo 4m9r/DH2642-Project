@@ -14,7 +14,6 @@ function signUp(model) {
       quizState: model.quizState,
       totalScore: model.totalScore,
       userID: model.userID,
-      userNumber: model.userNumber
     });
 
     model.setUser(user.uid, username.value);
