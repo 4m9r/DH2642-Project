@@ -9,6 +9,8 @@ function ListPresenter(props) {
                 description = {props.model.currentFriend.profileDescription}
                 score={props.model.currentFriend.totalScore}
                 favourites = {props.model.currentFriend.favourites}
+                movieChosen={id => props.model.setCurrentMovie(id)}
+
             />
         </div>
     )
