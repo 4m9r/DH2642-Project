@@ -115,7 +115,6 @@ class UserModel {
         }
     }
 
-    //NEW
     removeFromFavList(movie){
         this.favourites = this.favourites.filter(d => d.id !== movie.id);
         this.notifyObservers();
