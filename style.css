@@ -654,3 +654,11 @@ tr{
   justify-content: space-between;
   cursor: pointer;
 }
+
+.removeBut{
+  width: 150px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px yellow;
+  cursor: pointer;
+}
