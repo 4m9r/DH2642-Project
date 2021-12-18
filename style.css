@@ -607,16 +607,17 @@ legend{
   width: 40%;
   min-width: 200px;
   min-height: 500px;
-  font-size: 19px;
+  font-size: 22px;
   text-align: center;
   background-color: #5d5c6198;
-  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgb(0 0 0 / 75%);
+  border-radius: 8px;
   color: yellow;
+  
   
 }
 
 table {
-  border-top:solid #0d0d0c;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -652,7 +653,7 @@ tr{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  cursor:default;
+  cursor:pointer;
 }
 
 .removeBut{
@@ -661,5 +662,8 @@ tr{
   border-radius: 5px;
   box-shadow: 1px 1px yellow;
   cursor: pointer;
+}
+.leaderboard-txt{
+  margin-top: 10px;
 }
 
