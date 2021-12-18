@@ -652,7 +652,7 @@ tr{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  cursor: pointer;
+  cursor:default;
 }
 
 .removeBut{
