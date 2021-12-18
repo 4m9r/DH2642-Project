@@ -663,7 +663,12 @@ tr{
   box-shadow: 1px 1px yellow;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .leaderboard-txt{
   margin-top: 10px;
 }
+=======
+.removeBut:hover {background-color: rgb(211, 205, 205);}
+
+>>>>>>> 362f567ea8f8f28db56c56d80f0b4ed36f81a8ca
 
