@@ -14,15 +14,12 @@ const App = {
             this.user = user;
             defaultRoute();
         })
-
-        // this.model.fetchUserData();
     },
     render() {
         return (
             <div class="flexParent">
                 <div class="mainConetent">
-                    {this.user && <NavPresenter/>}
-                    {/* <Show hash="#list"> <ListPresenter model={props.model} /> </Show> */}
+                    {this.user && <NavPresenter />}
                     <Show hash="#search"> <SearchPresenter model={this.model} /> </Show>
                     <Show hash="#details"> <DetailsPresenter model={this.model} /> </Show>
                     <Show hash="#user"> <ListPresenter model={this.model} /> </Show>
