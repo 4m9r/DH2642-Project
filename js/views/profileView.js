@@ -2,7 +2,8 @@ function ProfileView(props) {
     function listing() {
         if (!props.favourites) { return <p>Oops, looks like there is nothing here!</p> } else {
             return <span class="profile-movie-list">
-                {props.favourites.map(f => <span class="profile-movie">
+                {props.favourites.map(f => <span class="profile-movie" onClick={
+                    e => { props.movieChosen(f.id); window.location.hash = "#details" }}>
                     <img src={f.image} height={100} />
                     <div>{f.title}</div>
                 </span>)}
