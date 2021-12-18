@@ -78,15 +78,11 @@ class UserModel {
     }
     setTotalUser(num) {
         this.totalUser = num;
-
-        this.notifyObservers();
     }
 
     setUser(uid, name) {
         this.userID = uid;
         this.username = name;
-        this.setUserNumber(this.totalUser);
-        this.setTotalUser(Number(this.totalUser) + 1);
         this.notifyObservers();
     }
 

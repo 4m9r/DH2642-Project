@@ -41,16 +41,16 @@ function persistModel(model) {
                 userNumber: model.userNumber
 
             });
-            if (model.userNumber != null)
+            if (model.userNumber !== null)
                 firebase.database().ref("learderboard").child(model.userNumber).set({
                     username: model.username,
                     totalScore: model.totalScore
                 })
+            if (model.totalUser !== null && model.totalUser !== 0)
+                firebase.database().ref("totalUser").set({
+                    total: model.totalUser
 
-            firebase.database().ref("totalUser").set({
-                total: model.totalUser
-
-            })
+                })
         }
     });
 
@@ -89,7 +89,7 @@ function persistModel(model) {
         loadingFromFirebase = false;
     });
 
-    firebase.database().ref("totalUser").once("value", function (data) {
+    firebase.database().ref("totalUser").on("value", function (data) {
         loadingFromFirebase = true;
         try {
             if (data.val())

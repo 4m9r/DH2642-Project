@@ -17,7 +17,9 @@ function signUp(model) {
     // });
 
     model.setUser(user.uid, username.value);
-    console.log(model)
+    model.setUserNumber(model.totalUser);
+    model.setTotalUser(Number(model.totalUser) + 1);
+
 
   });
   promise.catch(e => alert(e.message));
