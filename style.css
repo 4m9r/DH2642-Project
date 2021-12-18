@@ -662,4 +662,6 @@ tr{
   box-shadow: 1px 1px yellow;
   cursor: pointer;
 }
+.removeBut:hover {background-color: rgb(211, 205, 205);}
+
 
