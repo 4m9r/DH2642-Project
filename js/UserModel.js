@@ -115,12 +115,7 @@ class UserModel {
         }
     }
 
-<<<<<<< HEAD
-    //NEW
     removeFromFavList(movie) {
-=======
-    removeFromFavList(movie){
->>>>>>> 362f567ea8f8f28db56c56d80f0b4ed36f81a8ca
         this.favourites = this.favourites.filter(d => d.id !== movie.id);
         this.notifyObservers();
     }
