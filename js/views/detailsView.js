@@ -10,6 +10,12 @@ function DetailsView(props) {
                             Add to my Favorites Movies!
                         </button>
 
+                        <button class="removeBut" disabled={!props.isMovieInFavourites}
+                            onClick={() => props.removeMovie(props.data)}
+                        >
+                            Remove From My List
+                        </button>
+
                         <button class="similarBut" onClick={() => window.location.hash = "#rec"}>
                             Find Similar Movies!
                         </button>
