@@ -1,6 +1,5 @@
 let loadingFromFirebase = false;
 
-
 function persistModel(model) {
     const auth = firebase.auth();
     model.addObserver(function () {
@@ -54,6 +53,8 @@ function persistModel(model) {
             }
             loadingFromFirebase = false;
         })
+
+
 
     firebase.database().ref("learderboard").on("value", function (data) {
         loadingFromFirebase = true;

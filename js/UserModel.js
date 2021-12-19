@@ -51,8 +51,6 @@ class UserModel {
         this.notifyObservers();
     }
 
-
-
     setLeaderboard(data) {
         this.leaderboardData = data;
     }
@@ -110,7 +108,6 @@ class UserModel {
         }
         else {
             this.favourites = [...this.favourites, movie];
-            console.log(this.favourites)
             this.notifyObservers();
         }
     }
