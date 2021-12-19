@@ -1,7 +1,14 @@
 function defaultRoute() {
     const user = firebase.auth().currentUser
-    if (user) { if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; }
-    else { if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; }
+    if (user) { 
+        console.log(window.location.hash);
+
+        if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; 
+    }
+    else { 
+        if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; 
+
+    }
 }
 
 const App = {
@@ -29,7 +36,6 @@ const App = {
                     <Show hash="#login"> <LogInPresenter model={this.model} /> </Show>
                     <Show hash="#leaderboard"> <LeaderboardPresenter model={this.model} /> </Show>
                     <Show hash="#quiz"> <QuizPresenter model={this.model} /> </Show>
-
                 </div>
                 {this.user && <div class="userlist debug"><UserListPresenter model={this.model} /></div>}
             </div>
