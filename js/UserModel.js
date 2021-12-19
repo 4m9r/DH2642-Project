@@ -41,7 +41,7 @@ class UserModel {
         this.username = null;
         this.quizState = [];
         this.profilePic = null;
-        // this.favourites = [];
+        this.favourites = [];
         this.users = [];
         this.currentFriend = 'anon';
         this.quizList = [];
@@ -115,7 +115,7 @@ class UserModel {
         }
     }
 
-    removeFromFavList(movie){
+    removeFromFavList(movie) {
         this.favourites = this.favourites.filter(d => d.id !== movie.id);
         this.notifyObservers();
     }
