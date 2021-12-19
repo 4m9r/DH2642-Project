@@ -52,3 +52,5 @@ Used to render the details for each movie (and find similar movies)
 3. Download Live Server extenstion (Ctrl+Shift+X)
 4. Open vue.html file in Visual Studio Code
 5. Click on "Go Live" (buttom right) to run live server 
+
+- P.S. you need your own firebaseConfig.js and apiConfig.js
