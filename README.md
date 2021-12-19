@@ -47,8 +47,8 @@ Used to render the details for each movie (and find similar movies)
 
 ## How to setup
 
-- Have Git installed on your computer
-- Start the terminal and enter git clone https://github.com/4m9r/DH2642-Project.git
-- Go into the terminal and move to the project folder called "DH2642-Project"
-- Enter "npm install" into the terminal 
-- Enter "npm start" into the terminal
+1. Clone the project into a folder with git clone https://github.com/4m9r/DH2642-Project.git
+2. Open the project in Visual Studio Code
+3. Download Live Server extenstion (Ctrl+Shift+X)
+4. Open vue.html file in Visual Studio Code
+5. Click on "Go Live" (buttom right) to run live server 
