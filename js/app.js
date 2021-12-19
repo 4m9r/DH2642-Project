@@ -3,19 +3,10 @@ function defaultRoute() {
     if (user) { 
         console.log(window.location.hash);
 
-        /*if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; */
-        if (window.location.hash != "#details" && window.location.hash != "#user"
-        && window.location.hash != "#search" && window.location.hash != "#rec" 
-        && window.location.hash != "#quiz" && window.location.hash != "#leaderboard" 
-        && window.location.hash != "#profile") 
-        
-            { window.location.hash = "#search"; }
+        if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; 
     }
     else { 
-        /*if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; */
-        if (window.location.hash != "#signup" && window.location.hash != "#login") 
-            { window.location.hash = "#login"; }
-            console.log(window.location.hash);
+        if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; 
 
     }
 }
