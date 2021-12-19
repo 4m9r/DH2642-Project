@@ -1,7 +1,6 @@
 function defaultRoute() {
     const user = firebase.auth().currentUser
     if (user) { 
-        console.log(window.location.hash);
 
         if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; 
     }
