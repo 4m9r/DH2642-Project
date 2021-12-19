@@ -11,7 +11,7 @@ Film Buff helps users search for movies based on popularity, genre, etc. Additio
   - Users can search a movie and see the details of it
   - There will be quizzes about random movies with a leaderboard system so the users can compete with each other
   - Users can see the lists that have been created by others 
-  - Users can make their own lists and collaborate on them if they want
+  - Users can make their own lists 
 
 
 ## file structure
@@ -52,3 +52,6 @@ Used to render the details for each movie (and find similar movies)
 3. Download Live Server extenstion (Ctrl+Shift+X)
 4. Open vue.html file in Visual Studio Code
 5. Click on "Go Live" (buttom right) to run live server 
+
+- P.S. you need your own firebaseConfig.js and apiConfig.js
+- API used: https://imdb-api.com/
