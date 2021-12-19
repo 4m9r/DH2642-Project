@@ -54,3 +54,4 @@ Used to render the details for each movie (and find similar movies)
 5. Click on "Go Live" (buttom right) to run live server 
 
 - P.S. you need your own firebaseConfig.js and apiConfig.js
+- API used: https://imdb-api.com/
