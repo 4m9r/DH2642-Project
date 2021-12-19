@@ -17,8 +17,8 @@ Film Buff helps users search for movies based on popularity, genre, etc. Additio
 ## file structure
 - loginView.js and signUpView.js
   Will be used to authenticate the users
-- MenuView.js
- A drop down menu, used for navigation by users
+- MenuView.js and navPresenter.js
+ A drop down menu, used for navigation by users and showing the logo and name of the website
 - detailsView.js and detailsPresenter.js
 Used to render the details for each movie (and find similar movies)
 - searchView.js and searchPresenter.js
