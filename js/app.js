@@ -36,7 +36,6 @@ const App = {
                     <Show hash="#login"> <LogInPresenter /> </Show>
                     <Show hash="#leaderboard"> <LeaderboardPresenter model={this.model} /> </Show>
                     <Show hash="#quiz"> <QuizPresenter model={this.model} /> </Show>
-
                 </div>
                 {this.user && <div class="userlist debug"><UserListPresenter model={this.model} /></div>}
             </div>
