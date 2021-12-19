@@ -1,4 +1,4 @@
-function MenuView(props) {
+function MenuView() {
 
   return (
     <div class="menudrop">
@@ -15,17 +15,3 @@ function MenuView(props) {
 
 }
 
-// if user is logged in => Log Out option
-// if nobody is logged in => Log In option
-
-// onClick={() => window.alert("To be implemented")
-
-{/* <div class="menudrop">
-<button class="menubutton">Menu</button>
-<div class="menucontent">
-  <a href="#list">My list</a>
-  <a href="#search">Search for a movie</a>
-  <a href="#recommend">Recommend me a movie</a>
-  <a href="#quiz">Take a quiz</a>
-</div>
-</div> */}

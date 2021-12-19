@@ -1,6 +1,5 @@
 function ProfilePresenter(props) {
 
-
     return (
         <div>
             <ProfileView

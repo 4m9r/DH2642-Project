@@ -4,7 +4,7 @@ function MovieListView(props) {
         /*for each item (movie), display the title and the image poster of the movie. span for each, display inline block */
             // title of list, by user, desription of list 
             <h1> {props.users.user.lists.list.titleoflist}</h1>
-            <h6> by {props.users.user}</h6> 
+            <h6> by {props.users.user}</h6>
             <p> {props.users.user.lists.list.description} </p>
             {props.users.user.lists.list.map(x =>
                 <div key={x.id}>
@@ -24,6 +24,3 @@ function MovieListView(props) {
         </div>
     )
 }
-
-
-// can we switch between grid view and list view?? hmmmm

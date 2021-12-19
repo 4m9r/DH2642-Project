@@ -6,7 +6,7 @@ function RecommendPresenter(props) {
                 searchResults={props.model.currentMovieDetails.similars}
                 movieChosen={id => props.model.setCurrentMovie(id)}
             />
-           
+
         </div>
     );
 }

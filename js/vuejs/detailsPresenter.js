@@ -3,7 +3,7 @@ function DetailsPresenter(props) {
         <DetailsView
             addToList={e => props.model.addToFavourites(e)}
             removeMovie={e => props.model.removeFromFavList(e)}
-            isMovieInFavourites={props.model.favourites.find(d => d.id== props.model.currentMovieDetails.id)}
+            isMovieInFavourites={props.model.favourites.find(d => d.id == props.model.currentMovieDetails.id)}
             currentMovie={props.model.currentMovie}
             data={props.model.currentMovieDetails}
 

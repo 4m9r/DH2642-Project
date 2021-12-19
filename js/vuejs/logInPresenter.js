@@ -1,7 +1,7 @@
-function LogInPresenter(props) {
+function LogInPresenter() {
     return (
         <div>
-            <LogInView/>
+            <LogInView />
         </div>
     );
 }

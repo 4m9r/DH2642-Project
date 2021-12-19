@@ -1,12 +1,12 @@
 function defaultRoute() {
     const user = firebase.auth().currentUser
-    if (user) { 
-
-        if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash == knownRoute))) window.location.hash = "#search"; 
+    if (user) {
+        if (!(["#search", "#details", "#user", "#rec", "#quiz", "#leaderboard", "#profile"].find((knownRoute) => window.location.hash === knownRoute)))
+            window.location.hash = "#search";
     }
-    else { 
-        if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute))) window.location.hash = "#login"; 
-
+    else {
+        if (!(["#signup", "#login"].find((knownRoute) => window.location.hash === knownRoute)))
+            window.location.hash = "#login";
     }
 }
 
@@ -20,6 +20,7 @@ const App = {
             this.user = user;
             defaultRoute();
         })
+
     },
     render() {
         return (
@@ -32,7 +33,7 @@ const App = {
                     <Show hash="#rec"> <RecommendPresenter model={this.model} /> </Show>
                     <Show hash="#signup"> <SignUpPresenter model={this.model} /> </Show>
                     <Show hash="#profile"> <ProfilePresenter model={this.model} /> </Show>
-                    <Show hash="#login"> <LogInPresenter model={this.model} /> </Show>
+                    <Show hash="#login"> <LogInPresenter /> </Show>
                     <Show hash="#leaderboard"> <LeaderboardPresenter model={this.model} /> </Show>
                     <Show hash="#quiz"> <QuizPresenter model={this.model} /> </Show>
                 </div>
